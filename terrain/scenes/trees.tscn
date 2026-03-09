@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b015tlnxuo2ib"]
+
+[ext_resource type="Texture2D" uid="uid://06iaun8nj8p5" path="res://terrain/assets/Props/Static/Trees/Model_01/Size_05.png" id="1_a1dgu"]
+[ext_resource type="Texture2D" uid="uid://b5xg6ne2w8yvx" path="res://terrain/assets/Props/Static/Trees/Model_01/Size_04.png" id="2_30dw5"]
+[ext_resource type="Texture2D" uid="uid://cinm53y8pof1q" path="res://terrain/assets/Props/Static/Trees/Model_01/Size_03.png" id="3_woilr"]
+[ext_resource type="Texture2D" uid="uid://b5pugefnvsicm" path="res://terrain/assets/Props/Static/Trees/Model_01/Size_02.png" id="4_7u2kn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a1dgu"]
+texture = ExtResource("1_a1dgu")
+0:0/size_in_atlas = Vector2i(7, 10)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 70)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(30.226585, 11.257862, 25.600067, 2.0048256, 16.963898, -2.3132591, 22.824158, -4.4723015, 17.889206, -8.790384, -19.73981, -7.248211, -25.600067, -2.6216927, -24.36633, 2.6216927, -31.768757, 2.93013, -34.54467, 10.332558, -28.992846, 7.865082, -24.722662, 10.359142, -18.280842, 10.533245, -19.325462, 15.059933, -15.321087, 15.2340355, -13.405951, 10.707352, -7.6605434, 12.970692, -0.9253044, 10.949429, 5.5518227, 8, 7.1382313, 13.318897, 10.795212, 13.416904, 13.879555, 5.0891724, 13.879555, 12.4916, 18.814507, 12.1831665, 20.356682, 7.248211, 24.057892, 8.790386)
+7:0/size_in_atlas = Vector2i(7, 10)
+7:0/0 = 0
+7:0/0/texture_origin = Vector2i(0, 70)
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(30.226585, 11.257862, 25.600067, 2.0048256, 16.963898, -2.3132591, 22.824158, -4.4723015, 17.889206, -8.790384, -19.73981, -7.248211, -25.600067, -2.6216927, -24.36633, 2.6216927, -31.768757, 2.93013, -34.54467, 10.332558, -28.992846, 7.865082, -24.722662, 10.359142, -18.280842, 10.533245, -19.325462, 15.059933, -15.321087, 15.2340355, -13.405951, 10.707352, -7.6605434, 12.970692, -0.9253044, 10.949429, 5.5518227, 8, 7.1382313, 13.318897, 10.795212, 13.416904, 13.879555, 5.0891724, 13.879555, 12.4916, 18.814507, 12.1831665, 20.356682, 7.248211, 24.057892, 8.790386)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30dw5"]
+texture = ExtResource("2_30dw5")
+0:0/size_in_atlas = Vector2i(5, 8)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 55)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.9173222, 11.490812, 0.43525887, 11.3167095, 6.180666, 8, 8, -8, 8, -11.664919, 7.3993893, -16.365707, 3.0468082, -12.7095375, -2.524496, -9.749783, -2.524496)
+5:0/size_in_atlas = Vector2i(5, 8)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, 55)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.9173222, 11.490812, 0.43525887, 11.3167095, 6.180666, 8, 8, -8, 8, -11.664919, 7.3993893, -16.365707, 3.0468082, -12.7095375, -2.524496, -9.749783, -2.524496)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_woilr"]
+texture = ExtResource("3_woilr")
+0:0/size_in_atlas = Vector2i(3, 6)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 40)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.919512, -8, 5.919508, -8, 8, -2.524496, 8, 8, 2.263342, 8, -0.87051773, 4.2655296, -2.6115494, 6.5288715, -8, 6.702976)
+3:0/size_in_atlas = Vector2i(3, 6)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 40)
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.919512, -8, 5.919508, -8, 8, -2.524496, 8, 8, 2.263342, 8, -0.87051773, 4.2655296, -2.6115494, 6.5288715, -8, 6.702976)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7u2kn"]
+texture = ExtResource("4_7u2kn")
+2:0/size_in_atlas = Vector2i(2, 4)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, 23)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.352583, -8, 2.6115475, -8, 2.959755, 8, -4.7007885, 8)
+6:0/size_in_atlas = Vector2i(2, 4)
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, 23)
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.352583, -8, 2.6115475, -8, 2.959755, 8, -4.7007885, 8)
+
+[sub_resource type="TileSet" id="TileSet_iwxd1"]
+physics_layer_0/collision_layer = 1
+sources/4 = SubResource("TileSetAtlasSource_a1dgu")
+sources/5 = SubResource("TileSetAtlasSource_30dw5")
+sources/6 = SubResource("TileSetAtlasSource_woilr")
+sources/7 = SubResource("TileSetAtlasSource_7u2kn")
+
+[node name="trees" type="TileMap" unique_id=804214109]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_iwxd1")
+format = 2
+layer_0/y_sort_enabled = true
