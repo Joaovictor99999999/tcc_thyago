@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://wu72rni7c8e2" path="res://terrain/assets/Tilesets/Floors_Tiles.png" id="3_ux2gm"]
 [ext_resource type="Texture2D" uid="uid://b7m53ruaerx3v" path="res://terrain/assets/Tilesets/Water_tiles.png" id="4_7mwfm"]
 [ext_resource type="Texture2D" uid="uid://6qshbhou3ddf" path="res://terrain/assets/Tilesets/Wall_Variations.png" id="5_v5ng8"]
+[ext_resource type="Texture2D" uid="uid://3xxima0cituv" path="res://terrain/assets/Structures/Buildings/Floors.png" id="6_vu3ta"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ln1ou"]
 texture = ExtResource("1_e2vhq")
@@ -2105,6 +2106,18 @@ texture = ExtResource("5_v5ng8")
 14:29/0 = 0
 15:29/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ux2gm"]
+texture = ExtResource("6_vu3ta")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_dhwc8"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 1
@@ -2115,6 +2128,7 @@ sources/1 = SubResource("TileSetAtlasSource_yaj2a")
 sources/2 = SubResource("TileSetAtlasSource_u7cps")
 sources/3 = SubResource("TileSetAtlasSource_lw3ka")
 sources/4 = SubResource("TileSetAtlasSource_v3ts1")
+sources/5 = SubResource("TileSetAtlasSource_ux2gm")
 
 [node name="TileMap" type="TileMap" unique_id=1929025874]
 position = Vector2(0, -126)

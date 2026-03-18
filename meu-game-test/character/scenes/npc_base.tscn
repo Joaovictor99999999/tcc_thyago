@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://co0ht0lkrjtp2"]
+
+[ext_resource type="Script" uid="uid://bhc6clls0whbp" path="res://character/scenes/npc_base.gd" id="1_fddor"]
+[ext_resource type="Texture2D" uid="uid://sn2t8s2wmxg8" path="res://character/assets/Idle_Down-Sheet (6) (2).png" id="2_fddor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fddor"]
+size = Vector2(22, 36)
+
+[sub_resource type="Animation" id="Animation_r31x4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_uoebc"]
+resource_name = "idle"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i455c"]
+_data = {
+&"RESET": SubResource("Animation_r31x4"),
+&"idle": SubResource("Animation_uoebc")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fddor"]
+radius = 23.021729
+
+[node name="fazendeiro" type="CharacterBody2D" unique_id=453104995]
+script = ExtResource("1_fddor")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=940422483]
+texture = ExtResource("2_fddor")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1423702439]
+position = Vector2(-7, -1)
+shape = SubResource("RectangleShape2D_fddor")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=216484472]
+libraries/ = SubResource("AnimationLibrary_i455c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=322945112]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=215317730]
+position = Vector2(-7, 11)
+shape = SubResource("CircleShape2D_fddor")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

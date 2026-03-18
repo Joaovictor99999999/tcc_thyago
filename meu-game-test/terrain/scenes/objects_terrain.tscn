@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bfk4mvftnkhmn" path="res://terrain/assets/Props/Static/Vegetation.png" id="3_tipal"]
 [ext_resource type="Texture2D" uid="uid://p1a58ao387tr" path="res://terrain/assets/Props/Static/Rocks.png" id="4_iav2j"]
 [ext_resource type="Texture2D" uid="uid://cqny23mh4kr56" path="res://terrain/assets/Structures/Stations/Workbench/Workbench.png" id="5_tipal"]
+[ext_resource type="Texture2D" uid="uid://dohdewto05kya" path="res://terrain/assets/Props/Static/Esoteric.png" id="5_v4878"]
 [ext_resource type="Texture2D" uid="uid://djqhwdfui1pvw" path="res://terrain/assets/Structures/Stations/Sawmill/Base.png" id="6_iav2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4qal"]
@@ -1494,6 +1495,61 @@ texture = ExtResource("4_iav2j")
 8:1/0/texture_origin = Vector2i(0, 6)
 8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 13.231846, -7.2252846, 13.057743, 2.1762905, 4.874893, 8, -8, 8, -12.709536, 3.3950138, -12.187227, -3.395012)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0ei3"]
+texture = ExtResource("5_v4878")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+0:5/0 = 0
+2:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+0:12/0 = 0
+0:13/0 = 0
+0:14/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iav2j"]
 texture = ExtResource("5_tipal")
 3:4/size_in_atlas = Vector2i(3, 3)
@@ -1536,6 +1592,7 @@ sources/2 = SubResource("TileSetAtlasSource_t4nhr")
 sources/3 = SubResource("TileSetAtlasSource_0ffpo")
 sources/5 = SubResource("TileSetAtlasSource_iav2j")
 sources/8 = SubResource("TileSetAtlasSource_da8qx")
+sources/4 = SubResource("TileSetAtlasSource_b0ei3")
 
 [node name="objects_terrain" type="TileMap" unique_id=1819035572]
 y_sort_enabled = true

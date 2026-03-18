@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://jio6c36c4bqw"]
+
+[ext_resource type="Script" uid="uid://rsnpq1r8ektm" path="res://miigames/minigame_bibliotecario.gd" id="1_0340w"]
+[ext_resource type="Texture2D" uid="uid://bb08itfrtokj1" path="res://miigames/Captura de tela 2026-03-14 155330.png" id="2_53pc7"]
+[ext_resource type="Script" uid="uid://cx2jm4sh82ip6" path="res://miigames/ficha.gd" id="3_ga4c0"]
+[ext_resource type="Texture2D" uid="uid://diwu2jqa26r0" path="res://miigames/New Piskel (2) (1).png" id="3_kgdfs"]
+[ext_resource type="Texture2D" uid="uid://ciyxytcekychf" path="res://miigames/Furniture.png" id="3_y8dat"]
+[ext_resource type="FontFile" uid="uid://chfl2espt2lye" path="res://Minecraft.ttf" id="4_h83df"]
+[ext_resource type="Script" uid="uid://dc3qpcpimp8x1" path="res://miigames/bau.gd" id="6_k8y2p"]
+[ext_resource type="Texture2D" uid="uid://df2xvctdg34v2" path="res://miigames/New Piskel (3) (1).png" id="8_53pc7"]
+[ext_resource type="Texture2D" uid="uid://bsm0gfbwvo2ug" path="res://miigames/Esoteric.png" id="9_53pc7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vynt2"]
+font = ExtResource("4_h83df")
+font_size = 8
+font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_53pc7"]
+font = ExtResource("4_h83df")
+font_size = 9
+font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ga4c0"]
+font_size = 15
+font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0340w"]
+font_size = 13
+font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8y2p"]
+font_color = Color(0.49047178, 0.3026451, 0.21713895, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kgdfs"]
+font = ExtResource("4_h83df")
+font_size = 10
+font_color = Color(0.25292358, 0.16086018, 0.12770507, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_60o42"]
+font = ExtResource("4_h83df")
+font_size = 8
+font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyj34"]
+font = ExtResource("4_h83df")
+font_size = 10
+font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
+
+[node name="MinigameBibliotecario" type="CanvasLayer" unique_id=1306509426]
+script = ExtResource("1_0340w")
+
+[node name="PainelPrincipal" type="TextureRect" parent="." unique_id=989036992]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -327.0
+offset_top = -15.0
+offset_right = 265.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_53pc7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ficha_string" type="TextureRect" parent="PainelPrincipal" unique_id=855334787]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 138.0
+offset_right = 468.0
+offset_bottom = 178.0
+texture = ExtResource("3_kgdfs")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_ga4c0")
+tipo_da_ficha = "STRING"
+
+[node name="Label" type="Label" parent="PainelPrincipal/ficha_string" unique_id=1354330453]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 33.0
+text = "chave"
+label_settings = SubResource("LabelSettings_vynt2")
+
+[node name="ficha_float" type="TextureRect" parent="PainelPrincipal" unique_id=2053865720]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 131.0
+offset_right = 519.0
+offset_bottom = 171.0
+texture = ExtResource("3_kgdfs")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_ga4c0")
+tipo_da_ficha = "FLOAT"
+
+[node name="Label" type="Label" parent="PainelPrincipal/ficha_float" unique_id=1701441524]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 49.0
+offset_bottom = 35.0
+text = "23.90"
+label_settings = SubResource("LabelSettings_53pc7")
+
+[node name="bau1" type="TextureRect" parent="PainelPrincipal" unique_id=1486099515]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 104.0
+offset_right = 438.0
+offset_bottom = 142.0
+mouse_filter = 0
+texture = ExtResource("3_y8dat")
+script = ExtResource("6_k8y2p")
+tipo_esperado = "FLOAT"
+
+[node name="Label" type="Label" parent="PainelPrincipal/bau1" unique_id=562863098]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 17.0
+offset_right = 33.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("4_h83df")
+text = "float"
+label_settings = SubResource("LabelSettings_ga4c0")
+
+[node name="Brilho_Neon" type="Polygon2D" parent="PainelPrincipal/bau1" unique_id=1910462173]
+
+[node name="bau2" type="TextureRect" parent="PainelPrincipal" unique_id=759108782]
+layout_mode = 0
+offset_left = 599.0
+offset_top = 104.0
+offset_right = 626.0
+offset_bottom = 142.0
+mouse_filter = 0
+texture = ExtResource("3_y8dat")
+script = ExtResource("6_k8y2p")
+tipo_esperado = "STRING"
+
+[node name="Label" type="Label" parent="PainelPrincipal/bau2" unique_id=1613687031]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("4_h83df")
+text = "string"
+label_settings = SubResource("LabelSettings_0340w")
+
+[node name="Brilho_Neon" type="Polygon2D" parent="PainelPrincipal/bau2" unique_id=162357607]
+
+[node name="bau3" type="TextureRect" parent="PainelPrincipal" unique_id=252319928]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 104.0
+offset_right = 572.0
+offset_bottom = 142.0
+mouse_filter = 0
+texture = ExtResource("3_y8dat")
+script = ExtResource("6_k8y2p")
+tipo_esperado = "INT"
+
+[node name="Label" type="Label" parent="PainelPrincipal/bau3" unique_id=218662756]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 18.0
+offset_right = 45.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("4_h83df")
+text = "int"
+label_settings = SubResource("LabelSettings_k8y2p")
+
+[node name="Brilho_Neon" type="Polygon2D" parent="PainelPrincipal/bau3" unique_id=598924388]
+
+[node name="ficha_int" type="TextureRect" parent="PainelPrincipal" unique_id=812012066]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 138.0
+offset_right = 567.0
+offset_bottom = 178.0
+texture = ExtResource("3_kgdfs")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_ga4c0")
+tipo_da_ficha = "INT"
+
+[node name="Label" type="Label" parent="PainelPrincipal/ficha_int" unique_id=24140210]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 54.0
+offset_bottom = 34.0
+text = "23"
+label_settings = SubResource("LabelSettings_kgdfs")
+
+[node name="LabelScore" type="Label" parent="PainelPrincipal" unique_id=1961917723]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TelaVitoria" type="TextureRect" parent="." unique_id=1142696367]
+visible = false
+offset_left = 70.0
+offset_top = 26.0
+offset_right = 295.0
+offset_bottom = 153.0
+mouse_filter = 2
+texture = ExtResource("8_53pc7")
+
+[node name="Label" type="Label" parent="TelaVitoria" unique_id=1577158130]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 14.0
+offset_right = 610.0
+offset_bottom = 167.0
+text = "      O segredo dos tipos
+ (INT, STRING, FLOAT) não é
+ mais um mistério para você.
+        A vitória é sua!"
+label_settings = SubResource("LabelSettings_60o42")
+
+[node name="Button" type="Button" parent="TelaVitoria" unique_id=1784430746]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 100.0
+offset_right = 136.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("4_h83df")
+theme_override_font_sizes/font_size = 8
+text = "  coletar "
+
+[node name="TextureRect" type="TextureRect" parent="TelaVitoria" unique_id=978834669]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.575
+anchor_top = 0.5
+anchor_right = 1.575
+anchor_bottom = 0.5
+offset_left = -251.375
+offset_top = 5.5
+offset_right = -227.375
+offset_bottom = 32.5
+texture = ExtResource("9_53pc7")
+
+[node name="ColorRect" type="ColorRect" parent="TelaVitoria" unique_id=1255735754]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+offset_left = 101.0
+offset_top = 69.0
+offset_right = 14.5
+offset_bottom = 96.0
+color = Color(0.0627451, 0.0627451, 0.0627451, 0.5294118)
+
+[node name="TelaDerrota" type="TextureRect" parent="." unique_id=578890223]
+visible = false
+offset_left = 70.0
+offset_top = 27.0
+offset_right = 296.0
+offset_bottom = 152.0
+mouse_filter = 2
+texture = ExtResource("8_53pc7")
+
+[node name="Label" type="Label" parent="TelaDerrota" unique_id=1131017512]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 19.0
+offset_right = 295.0
+offset_bottom = 120.0
+text = "Erro de compatibilidade de tipos. 
+     A organização dos dados
+     foi interrompida devido 
+  ao excesso de falhas lógicas."
+label_settings = SubResource("LabelSettings_qyj34")
+
+[node name="Button" type="Button" parent="TelaDerrota" unique_id=1780511705]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.065000005
+anchor_bottom = 0.14500001
+offset_left = 62.0
+offset_top = 88.0
+offset_right = 145.31
+offset_bottom = 90.875
+theme_override_fonts/font = ExtResource("4_h83df")
+theme_override_font_sizes/font_size = 10
+text = "tentar novamente"
+
+[connection signal="pressed" from="TelaVitoria/Button" to="." method="_on_botao_vitoria_pressed"]
+[connection signal="pressed" from="TelaDerrota/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TelaDerrota/Button" to="." method="_on_botao_retry_pressed"]

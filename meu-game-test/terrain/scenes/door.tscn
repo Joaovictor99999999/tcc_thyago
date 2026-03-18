@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://brkf50f4ksokm"]
+
+[ext_resource type="Script" uid="uid://bbcc8ayamlsia" path="res://character/scripts/door.gd" id="1_hymuh"]
+[ext_resource type="Texture2D" uid="uid://snyvkjkfg50c" path="res://outros/Furniture (3).png" id="2_hymuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hymuh"]
+size = Vector2(33, 59)
+
+[sub_resource type="Animation" id="Animation_t6g4b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_niwaq"]
+resource_name = "abrir"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_hymuh"]
+resource_name = "fechar"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bbv6c"]
+_data = {
+&"RESET": SubResource("Animation_t6g4b"),
+&"abrir": SubResource("Animation_niwaq"),
+&"fechar": SubResource("Animation_hymuh")
+}
+
+[node name="door" type="Area2D" unique_id=44399323]
+script = ExtResource("1_hymuh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593775834]
+position = Vector2(188, 87)
+texture = ExtResource("2_hymuh")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1860476996]
+position = Vector2(188, 84.5)
+shape = SubResource("RectangleShape2D_hymuh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=287334910]
+libraries/ = SubResource("AnimationLibrary_bbv6c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

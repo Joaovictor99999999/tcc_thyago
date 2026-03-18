@@ -1,0 +1,355 @@
+[gd_scene format=3 uid="uid://dnr2mmo0eq735"]
+
+[ext_resource type="Texture2D" path="res://character/assets/Idle_Down-Sheet (4).png" id="1_8cjh7"]
+[ext_resource type="Texture2D" uid="uid://dlob1p0ncrg43" path="res://character/assets/Idle_Down-Sheet (7).png" id="3_oqnn1"]
+[ext_resource type="Texture2D" uid="uid://d8yq1mtmnmn2" path="res://character/assets/Idle_Down-Sheet (8).png" id="4_5tp47"]
+[ext_resource type="Texture2D" uid="uid://cxeoer5kr40c4" path="res://character/assets/Idle_Down-Sheet (9).png" id="5_0bdby"]
+[ext_resource type="Texture2D" uid="uid://b00ey4h84o6uf" path="res://character/assets/Idle_Down-Sheet (10).png" id="6_0bdby"]
+
+[sub_resource type="Animation" id="Animation_f3e4i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/carpinteiro:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/comerciante:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/comerciante:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 380)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/comerciante:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/inventor:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/inventor:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, 380)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/inventor:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/bibliotecario:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/fazendeiro:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_m77tw"]
+resource_name = "idle_bibioteclario"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/bibliotecario:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_0bdby"]
+resource_name = "idle_carpinteiro"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/carpinteiro:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/comerciante:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 380)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/comerciante:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_fblam"]
+resource_name = "idle_comerciante"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/comerciante:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/comerciante:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.47389644),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 380)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/comerciante:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.47389644),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5tp47"]
+resource_name = "idle_fazendeiro"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/comerciante:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, 380)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/comerciante:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/fazendeiro:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.16666667, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_10yk0"]
+resource_name = "idle_inventor"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/inventor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/inventor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.29851156),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, 380)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/inventor:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.18216622),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0bdby"]
+_data = {
+&"RESET": SubResource("Animation_f3e4i"),
+&"idle_bibioteclario": SubResource("Animation_m77tw"),
+&"idle_carpinteiro": SubResource("Animation_0bdby"),
+&"idle_comerciante": SubResource("Animation_fblam"),
+&"idle_fazendeiro": SubResource("Animation_5tp47"),
+&"idle_inventor": SubResource("Animation_10yk0")
+}
+
+[node name="NPC" type="CharacterBody2D" unique_id=886217377]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=985432618]
+libraries/ = SubResource("AnimationLibrary_0bdby")
+autoplay = &"idle_fazendeiro"
+
+[node name="bibliotecario" type="Sprite2D" parent="AnimationPlayer" unique_id=1570783966]
+position = Vector2(291, 188)
+texture = ExtResource("6_0bdby")
+hframes = 4
+
+[node name="area2d2" type="Area2D" parent="AnimationPlayer/bibliotecario" unique_id=402388107]
+position = Vector2(-498, 133)
+
+[node name="inventor" type="Sprite2D" parent="AnimationPlayer" unique_id=1603613427]
+position = Vector2(-38, 380)
+texture = ExtResource("5_0bdby")
+hframes = 4
+
+[node name="area2d4" type="Area2D" parent="AnimationPlayer/inventor" unique_id=136824566]
+position = Vector2(-505, 197)
+
+[node name="comerciante" type="Sprite2D" parent="AnimationPlayer" unique_id=907215568]
+position = Vector2(-7, 380)
+texture = ExtResource("4_5tp47")
+hframes = 4
+
+[node name="area2d3" type="Area2D" parent="AnimationPlayer/comerciante" unique_id=2042437214]
+position = Vector2(170, 200)
+
+[node name="carpinteiro" type="Sprite2D" parent="AnimationPlayer" unique_id=749660247]
+position = Vector2(178, 187)
+texture = ExtResource("3_oqnn1")
+hframes = 4
+
+[node name="area2d2" type="Area2D" parent="AnimationPlayer/carpinteiro" unique_id=1932670508]
+position = Vector2(-66, 163)
+
+[node name="fazendeiro" type="Sprite2D" parent="AnimationPlayer" unique_id=745603851]
+position = Vector2(73, 192)
+texture = ExtResource("1_8cjh7")
+hframes = 4
+
+[node name="area2d" type="Area2D" parent="AnimationPlayer/fazendeiro" unique_id=736081911]
+position = Vector2(-183, 387)

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dqajusk8x6ic1"]
+
+[ext_resource type="Texture2D" uid="uid://dlob1p0ncrg43" path="res://character/assets/Idle_Down-Sheet (7).png" id="1_qelkr"]
+
+[sub_resource type="Animation" id="Animation_euaul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IdleDownSheet(7):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_wh708"]
+resource_name = "idle_carpinteiro"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IdleDownSheet(7):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.16666667, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r21yg"]
+_data = {
+&"RESET": SubResource("Animation_euaul"),
+&"idle_carpinteiro": SubResource("Animation_wh708")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1970483655]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1811415106]
+libraries/ = SubResource("AnimationLibrary_r21yg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1061880382]
+hframes = 2
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1740551542]
+
+[node name="IdleDownSheet(7)" type="Sprite2D" parent="." unique_id=1190287851]
+position = Vector2(405, 220)
+texture = ExtResource("1_qelkr")
+hframes = 4

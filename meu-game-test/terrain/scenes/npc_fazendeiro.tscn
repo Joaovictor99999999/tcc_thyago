@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dtc1wcrbfk47x"]
+
+[ext_resource type="Texture2D" uid="uid://sn2t8s2wmxg8" path="res://character/assets/Idle_Down-Sheet (6) (2).png" id="1_2g5jt"]
+[ext_resource type="Script" uid="uid://l00qmuieqcf0" path="res://character/scripts/npc_fazendeiro.gd" id="1_w4m25"]
+[ext_resource type="Texture2D" uid="uid://dd8anw2obuu4a" path="res://New Piskel (1).png" id="3_t03rf"]
+[ext_resource type="FontFile" uid="uid://chfl2espt2lye" path="res://Minecraft.ttf" id="4_t03rf"]
+
+[sub_resource type="Animation" id="Animation_t03rf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ndwuc"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.13333334, 0.23333333, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1b75h"]
+_data = {
+&"RESET": SubResource("Animation_t03rf"),
+&"idle": SubResource("Animation_ndwuc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_noo27"]
+size = Vector2(61, 50)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4m25"]
+texture = ExtResource("3_t03rf")
+
+[sub_resource type="LabelSettings" id="LabelSettings_w4m25"]
+font = ExtResource("4_t03rf")
+font_size = 14
+font_color = Color(0.5834499, 0.5834499, 0.5834499, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4b4k"]
+font = ExtResource("4_t03rf")
+font_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="NPC_fazendeiro" type="Area2D" unique_id=750024615]
+script = ExtResource("1_w4m25")
+falas = Array[String](["", ""])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=872662310]
+texture = ExtResource("1_2g5jt")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1339213098]
+libraries/ = SubResource("AnimationLibrary_1b75h")
+autoplay = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930617484]
+position = Vector2(-7, 7)
+shape = SubResource("RectangleShape2D_noo27")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205488640]
+
+[node name="BalaoDialogo" type="PanelContainer" parent="CanvasLayer" unique_id=1489483607]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = 12.0
+offset_right = 120.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w4m25")
+
+[node name="MargensTexto" type="MarginContainer" parent="CanvasLayer/BalaoDialogo" unique_id=1830449799]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 18
+
+[node name="TextoDialogo" type="Label" parent="CanvasLayer/BalaoDialogo/MargensTexto" unique_id=101235764]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+label_settings = SubResource("LabelSettings_w4m25")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1739417878]
+wait_time = 0.1
+
+[node name="LabelInteracao" type="Label" parent="." unique_id=550933046]
+z_index = 1
+offset_left = -55.0
+offset_top = -41.0
+offset_right = 48.0
+offset_bottom = -18.0
+text = "pressione \"E\" para falar"
+label_settings = SubResource("LabelSettings_n4b4k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

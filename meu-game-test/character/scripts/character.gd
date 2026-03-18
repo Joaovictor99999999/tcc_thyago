@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Character
 var _state_machine
 @export_category("variables")
 @export var _move_speed: float = 64.0
