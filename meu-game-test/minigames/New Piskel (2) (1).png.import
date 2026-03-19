@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb08itfrtokj1"
-path="res://.godot/imported/Captura de tela 2026-03-14 155330.png-55dad42eb0fad5aa28ab1c1700e30fca.ctex"
+uid="uid://diwu2jqa26r0"
+path="res://.godot/imported/New Piskel (2) (1).png-0639e173a0bb96d0fe6ba7fb17f5e9e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://miigames/Captura de tela 2026-03-14 155330.png"
-dest_files=["res://.godot/imported/Captura de tela 2026-03-14 155330.png-55dad42eb0fad5aa28ab1c1700e30fca.ctex"]
+source_file="res://minigames/New Piskel (2) (1).png"
+dest_files=["res://.godot/imported/New Piskel (2) (1).png-0639e173a0bb96d0fe6ba7fb17f5e9e0.ctex"]
 
 [params]
 

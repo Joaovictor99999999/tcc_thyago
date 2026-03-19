@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8aqgtaxtqfe3"
-path="res://.godot/imported/fundo.png-7ef24739bef5d87d9214b2a926082fdc.ctex"
+uid="uid://5is5xhgcp41n"
+path="res://.godot/imported/New Piskel (4).png-f6cfbbb918ffc819e41f9f0894d929ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://miigames/fundo.png"
-dest_files=["res://.godot/imported/fundo.png-7ef24739bef5d87d9214b2a926082fdc.ctex"]
+source_file="res://character/assets/New Piskel (4).png"
+dest_files=["res://.godot/imported/New Piskel (4).png-f6cfbbb918ffc819e41f9f0894d929ab.ctex"]
 
 [params]
 

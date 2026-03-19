@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diwu2jqa26r0"
-path="res://.godot/imported/New Piskel (2) (1).png-932c7affefcd6f4ddb2ab18a3d2087ef.ctex"
+uid="uid://bsm0gfbwvo2ug"
+path="res://.godot/imported/Esoteric.png-522f05020f08cd9b32b5a5f202837dcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://miigames/New Piskel (2) (1).png"
-dest_files=["res://.godot/imported/New Piskel (2) (1).png-932c7affefcd6f4ddb2ab18a3d2087ef.ctex"]
+source_file="res://minigames/Esoteric.png"
+dest_files=["res://.godot/imported/Esoteric.png-522f05020f08cd9b32b5a5f202837dcf.ctex"]
 
 [params]
 

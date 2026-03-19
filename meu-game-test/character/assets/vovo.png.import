@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhhojeqyi8s0y"
-path="res://.godot/imported/ChatGPT Image 16 de mar. de 2026, 19_27_50.png-95dcf25bfe4b909f94495cb92fedabbd.ctex"
+uid="uid://cujsp2ogygr6i"
+path="res://.godot/imported/vovo.png-309e69e1867c8ffca2596b744c92c4ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://miigames/ChatGPT Image 16 de mar. de 2026, 19_27_50.png"
-dest_files=["res://.godot/imported/ChatGPT Image 16 de mar. de 2026, 19_27_50.png-95dcf25bfe4b909f94495cb92fedabbd.ctex"]
+source_file="res://character/assets/vovo.png"
+dest_files=["res://.godot/imported/vovo.png-309e69e1867c8ffca2596b744c92c4ce.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciyxytcekychf"
-path="res://.godot/imported/Furniture.png-c97d5f3f412db2d54e0a95330eb8d229.ctex"
+uid="uid://df2xvctdg34v2"
+path="res://.godot/imported/New Piskel (3) (1).png-103a55c0fb3b7dc510bb6ff64d488e94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://miigames/Furniture.png"
-dest_files=["res://.godot/imported/Furniture.png-c97d5f3f412db2d54e0a95330eb8d229.ctex"]
+source_file="res://minigames/New Piskel (3) (1).png"
+dest_files=["res://.godot/imported/New Piskel (3) (1).png-103a55c0fb3b7dc510bb6ff64d488e94.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bm32mvjrkic06"]
 
-[ext_resource type="Script" uid="uid://vmf7cpxv8jec" path="res://miigames/minigame_fazenda.gd" id="1_bs2mb"]
+[ext_resource type="Script" uid="uid://vmf7cpxv8jec" path="res://minigames/minigame_fazenda.gd" id="1_bs2mb"]
 [ext_resource type="Texture2D" uid="uid://dictmdretpsbc" path="res://terrain/assets/Props/Static/Farm.png" id="1_q6jj2"]
 [ext_resource type="PackedScene" uid="uid://cq5dtdb3btfsw" path="res://terrain/scenes/plantacao.tscn" id="2_8k42k"]
-[ext_resource type="Texture2D" uid="uid://8aqgtaxtqfe3" path="res://miigames/fundo.png" id="2_8225l"]
+[ext_resource type="Texture2D" uid="uid://8aqgtaxtqfe3" path="res://minigames/fundo.png" id="2_8225l"]
 [ext_resource type="Texture2D" uid="uid://c4q6irjecimvg" path="res://terrain/assets/Props/Static/Dungeon_Props.png" id="3_8225l"]
 [ext_resource type="Texture2D" uid="uid://dv5how8fuhhwn" path="res://terrain/assets/Tilesets/Dungeon_Tiles.png" id="5_2ftq1"]
 
