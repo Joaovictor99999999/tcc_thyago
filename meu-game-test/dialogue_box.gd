@@ -9,6 +9,7 @@ signal dialogo_finalizado
 var textos: Array = []
 var indice = 0
 
+
 var ativo = false
 var escrevendo = false
 var pode_avancar = false
@@ -46,16 +47,22 @@ func mostrar_proximo():
 	escrever_texto(frase)
 
 func escrever_texto(frase: String):
+	# Limpa o texto antes de começar
+	texto.text = ""
+	
 	for letra in frase:
-		# Se o jogador interrompeu a escrita no _input, paramos este loop imediatamente
+		# Se o jogador apertou o botão e 'escrevendo' ficou falso, 
+		# paramos o loop IMEDIATAMENTE.
 		if not escrevendo:
-			return
+			break
 			
 		texto.text += letra
+		
+		# O Timer ajuda a manter a cadência do Pixel Art
 		timer.start()
 		await timer.timeout
 	
-	# Se chegou ao fim do loop naturalmente, libera o avanço
+	# Garante que, ao sair do loop, o estado esteja correto
 	escrevendo = false
 	pode_avancar = true
 
@@ -63,17 +70,21 @@ func _input(event):
 	if not ativo:
 		return
 	
-	if event.is_action_pressed("interact"):
+	# Verificamos se a ação de interagir foi APERTADA (just_pressed)
+	# Usamos a classe global 'Input' para isso, que é mais precisa para UI
+	if Input.is_action_just_pressed("interact"):
 		
-		# 🔥 Se ainda estiver escrevendo → completa na hora e para o loop
 		if escrevendo:
-			escrevendo = false # Isso faz o loop do 'escrever_texto' dar o return
-			timer.stop()
+			# 1. Para o loop de escrita
+			escrevendo = false 
+			# 2. Mostra a frase completa na hora
+			# Usamos o indice - 1 porque o mostrar_proximo() já somou +1
 			texto.text = textos[indice - 1]
+			# 3. Libera o avanço para o PRÓXIMO clique
 			pode_avancar = true
-		
-		# 👉 Se já terminou a animação → vai para a próxima frase
+			
 		elif pode_avancar:
+			# Só avança se o texto já estiver estático na tela
 			mostrar_proximo()
 
 func fechar():

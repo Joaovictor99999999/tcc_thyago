@@ -105,7 +105,14 @@ func iniciar_cutscene():
 	dialogo.connect("dialogo_finalizado", _on_tutorial_concluido)
 	
 	dialogo.iniciar_dialogo(
-		["Explicação do jogo..."],
+		["Bem-vindo ao minigame de Tipos de Dados!",
+		"Na programação, cada valor tem um tipo.",
+		"INT representa números inteiros, sem casas decimais.",
+		"FLOAT representa números com casas decimais.",
+		"STRING representa textos.",
+		"Agora é com você!",
+		"Coloque cada dado na caixa correta.",
+		"Boa sorte!"],
 		preload("res://character/assets/vovo.png")
 	)
 
