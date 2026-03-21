@@ -12,6 +12,7 @@ var fase_atual: int = 1
 
 var finalizado = false
 var jogo_liberado = false 
+var cutscene_chamada: bool = false
 
 func _ready() -> void:
 	# 1. Garante funcionamento independente do pause do mundo
@@ -88,6 +89,9 @@ func embaralhar_fichas() -> void:
 			f.voltar_pro_lugar()
 
 func iniciar_cutscene():
+	if cutscene_chamada: return # Se já chamou uma vez, sai da função
+	cutscene_chamada = true # Marca que já chamou
+	
 	var dialogo_scene = load("res://minigames/dialogue_box.tscn")
 	if not dialogo_scene: return
 	
@@ -117,9 +121,11 @@ func iniciar_cutscene():
 	)
 
 func _on_tutorial_concluido():
+	print("Tutorial finalizado. Liberando fichas...")
 	jogo_liberado = true
 	set_fichas_ativas(true)
 	embaralhar_fichas()
+	# O get_tree().paused continua TRUE aqui para o mundo não rodar ao fundo
 
 func vencer_jogo():
 	finalizado = true

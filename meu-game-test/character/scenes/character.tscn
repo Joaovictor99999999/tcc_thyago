@@ -450,6 +450,7 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_deaer")
 states/walk/position = Vector2(454.96, 193.6)
 
 [node name="Character" type="CharacterBody2D" unique_id=642945273 node_paths=PackedStringArray("_animation_tree")]
+process_mode = 3
 script = ExtResource("1_hg145")
 _animation_tree = NodePath("AnimationTree")
 

@@ -89,8 +89,8 @@ func _input(event):
 
 func fechar():
 	ativo = false
-	get_tree().paused = false
+	# REMOVA ESTA LINHA: get_tree().paused = false 
+	# Pois o Minigame ainda precisa que o mundo continue pausado!
 	
 	emit_signal("dialogo_finalizado")
-	
 	queue_free()

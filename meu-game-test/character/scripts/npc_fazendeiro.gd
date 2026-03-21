@@ -91,18 +91,18 @@ func encerrar_dialogo(abrir_jogo: bool):
 		# Se apenas fechamos o diálogo (player saiu de perto), despausamos
 		get_tree().paused = false
 
+# No npc.gd, na função abrir_minigame_direto()
 func abrir_minigame_direto():
+	if not pode_interagir: return # Trava essencial
+	pode_interagir = false 
+	
 	var jogo = minigame_scene.instantiate()
-	
-	# Importante: O minigame deve ser Always para rodar no pause
-	jogo.process_mode = Node.PROCESS_MODE_ALWAYS
-	
-	# Adiciona o minigame na cena principal (acima do level)
 	get_tree().current_scene.add_child(jogo)
 	
-	# Desativa o NPC temporariamente para ele não reiniciar o papo
-	bloquear_interacao_temporariamente()
-
+	# Isso evita que o clique do 'E' que abriu o jogo 
+	# seja lido pelo minigame no mesmo milissegundo
+	await get_tree().create_timer(0.2).timeout
+	
 func bloquear_interacao_temporariamente():
 	pode_interagir = false
 	await get_tree().create_timer(0.5).timeout
