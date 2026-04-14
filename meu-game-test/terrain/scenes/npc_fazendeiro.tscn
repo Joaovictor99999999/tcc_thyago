@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sn2t8s2wmxg8" path="res://character/assets/Idle_Down-Sheet (6) (2).png" id="1_2g5jt"]
 [ext_resource type="Script" uid="uid://l00qmuieqcf0" path="res://character/scripts/npc_fazendeiro.gd" id="1_w4m25"]
 [ext_resource type="Texture2D" uid="uid://5is5xhgcp41n" path="res://character/assets/New Piskel (4).png" id="3_t03rf"]
-[ext_resource type="FontFile" uid="uid://chfl2espt2lye" path="res://Minecraft.ttf" id="4_t03rf"]
+[ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="4_t03rf"]
 
 [sub_resource type="Animation" id="Animation_t03rf"]
 length = 0.001
@@ -44,7 +44,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_noo27"]
-size = Vector2(61, 50)
+size = Vector2(101, 90)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4m25"]
 texture = ExtResource("3_t03rf")
@@ -53,11 +53,15 @@ texture = ExtResource("3_t03rf")
 font = ExtResource("4_t03rf")
 font_size = 14
 font_color = Color(0.5834499, 0.5834499, 0.5834499, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n4b4k"]
 font = ExtResource("4_t03rf")
 font_size = 8
+shadow_size = 2
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="NPC_fazendeiro" type="Area2D" unique_id=750024615]
@@ -73,7 +77,7 @@ libraries/ = SubResource("AnimationLibrary_1b75h")
 autoplay = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=930617484]
-position = Vector2(-7, 7)
+position = Vector2(-5.5, -3)
 shape = SubResource("RectangleShape2D_noo27")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205488640]
@@ -104,6 +108,7 @@ texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
+text = "ola"
 label_settings = SubResource("LabelSettings_w4m25")
 horizontal_alignment = 1
 vertical_alignment = 1

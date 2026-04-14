@@ -1,51 +1,53 @@
 [gd_scene format=3 uid="uid://jio6c36c4bqw"]
 
 [ext_resource type="Script" uid="uid://rsnpq1r8ektm" path="res://minigames/minigame_bibliotecario.gd" id="1_0340w"]
-[ext_resource type="Texture2D" uid="uid://bb08itfrtokj1" path="res://minigames/Captura de tela 2026-03-14 155330.png" id="2_53pc7"]
+[ext_resource type="Texture2D" uid="uid://bnn2a23numaif" path="res://minigames/Captura de tela 2026-03-25 002152.png" id="2_4tjph"]
 [ext_resource type="Script" uid="uid://cx2jm4sh82ip6" path="res://minigames/ficha.gd" id="3_ga4c0"]
 [ext_resource type="Texture2D" uid="uid://diwu2jqa26r0" path="res://minigames/New Piskel (2) (1).png" id="3_kgdfs"]
 [ext_resource type="Texture2D" uid="uid://ciyxytcekychf" path="res://minigames/Furniture.png" id="3_y8dat"]
-[ext_resource type="FontFile" uid="uid://chfl2espt2lye" path="res://Minecraft.ttf" id="4_h83df"]
+[ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="5_4tjph"]
 [ext_resource type="Script" uid="uid://dc3qpcpimp8x1" path="res://minigames/bau.gd" id="6_k8y2p"]
 [ext_resource type="Texture2D" uid="uid://df2xvctdg34v2" path="res://minigames/New Piskel (3) (1).png" id="8_53pc7"]
 [ext_resource type="Texture2D" uid="uid://bsm0gfbwvo2ug" path="res://minigames/Esoteric.png" id="9_53pc7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vynt2"]
-font = ExtResource("4_h83df")
-font_size = 8
-font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_53pc7"]
-font = ExtResource("4_h83df")
+font = ExtResource("5_4tjph")
 font_size = 9
 font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_53pc7"]
+font = ExtResource("5_4tjph")
+font_size = 10
+font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_ga4c0"]
-font_size = 15
+font = ExtResource("5_4tjph")
+font_size = 12
 font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0340w"]
-font_size = 13
+font = ExtResource("5_4tjph")
+font_size = 12
 font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_k8y2p"]
+font = ExtResource("5_4tjph")
+font_size = 14
 font_color = Color(0.49047178, 0.3026451, 0.21713895, 1)
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kgdfs"]
-font = ExtResource("4_h83df")
-font_size = 10
+font = ExtResource("5_4tjph")
+font_size = 12
 font_color = Color(0.25292358, 0.16086018, 0.12770507, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_60o42"]
-font = ExtResource("4_h83df")
 font_size = 12
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qyj34"]
-font = ExtResource("4_h83df")
 font_size = 10
 font_color = Color(0, 0, 0, 1)
 
@@ -56,22 +58,22 @@ script = ExtResource("1_0340w")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -327.0
-offset_top = -15.0
-offset_right = 265.0
-offset_bottom = 72.0
+offset_left = -263.0
+offset_top = -29.0
+offset_right = 329.0
+offset_bottom = 58.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_53pc7")
+texture = ExtResource("2_4tjph")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="ficha_string" type="TextureRect" parent="PainelPrincipal" unique_id=855334787]
 layout_mode = 0
-offset_left = 428.0
-offset_top = 138.0
-offset_right = 468.0
-offset_bottom = 178.0
+offset_left = 367.0
+offset_top = 167.0
+offset_right = 407.0
+offset_bottom = 207.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -80,19 +82,19 @@ tipo_da_ficha = "STRING"
 
 [node name="Label" type="Label" parent="PainelPrincipal/ficha_string" unique_id=1354330453]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 10.0
-offset_right = 48.0
-offset_bottom = 33.0
+offset_left = 9.0
+offset_top = 11.0
+offset_right = 49.0
+offset_bottom = 34.0
 text = "chave"
 label_settings = SubResource("LabelSettings_vynt2")
 
 [node name="ficha_float" type="TextureRect" parent="PainelPrincipal" unique_id=2053865720]
 layout_mode = 0
-offset_left = 479.0
-offset_top = 131.0
-offset_right = 519.0
-offset_bottom = 171.0
+offset_left = 410.0
+offset_top = 155.0
+offset_right = 450.0
+offset_bottom = 195.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -110,10 +112,10 @@ label_settings = SubResource("LabelSettings_53pc7")
 
 [node name="bau1" type="TextureRect" parent="PainelPrincipal" unique_id=1486099515]
 layout_mode = 0
-offset_left = 411.0
-offset_top = 104.0
-offset_right = 438.0
-offset_bottom = 142.0
+offset_left = 321.0
+offset_top = 120.0
+offset_right = 353.0
+offset_bottom = 167.0
 mouse_filter = 0
 texture = ExtResource("3_y8dat")
 script = ExtResource("6_k8y2p")
@@ -121,11 +123,10 @@ tipo_esperado = "FLOAT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau1" unique_id=562863098]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 17.0
-offset_right = 33.0
-offset_bottom = 33.0
-theme_override_fonts/font = ExtResource("4_h83df")
+offset_left = 1.0
+offset_top = 29.0
+offset_right = 38.0
+offset_bottom = 51.0
 text = "float"
 label_settings = SubResource("LabelSettings_ga4c0")
 
@@ -133,10 +134,10 @@ label_settings = SubResource("LabelSettings_ga4c0")
 
 [node name="bau2" type="TextureRect" parent="PainelPrincipal" unique_id=759108782]
 layout_mode = 0
-offset_left = 599.0
-offset_top = 104.0
-offset_right = 626.0
-offset_bottom = 142.0
+offset_left = 483.0
+offset_top = 121.0
+offset_right = 515.0
+offset_bottom = 166.0
 mouse_filter = 0
 texture = ExtResource("3_y8dat")
 script = ExtResource("6_k8y2p")
@@ -144,11 +145,10 @@ tipo_esperado = "STRING"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau2" unique_id=1613687031]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 20.0
-offset_right = 40.0
-offset_bottom = 43.0
-theme_override_fonts/font = ExtResource("4_h83df")
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 45.0
+offset_bottom = 49.0
 text = "string"
 label_settings = SubResource("LabelSettings_0340w")
 
@@ -156,10 +156,10 @@ label_settings = SubResource("LabelSettings_0340w")
 
 [node name="bau3" type="TextureRect" parent="PainelPrincipal" unique_id=252319928]
 layout_mode = 0
-offset_left = 546.0
-offset_top = 104.0
-offset_right = 572.0
-offset_bottom = 142.0
+offset_left = 548.0
+offset_top = 121.0
+offset_right = 580.0
+offset_bottom = 166.0
 mouse_filter = 0
 texture = ExtResource("3_y8dat")
 script = ExtResource("6_k8y2p")
@@ -167,11 +167,10 @@ tipo_esperado = "INT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau3" unique_id=218662756]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 18.0
-offset_right = 45.0
-offset_bottom = 41.0
-theme_override_fonts/font = ExtResource("4_h83df")
+offset_left = 9.0
+offset_top = 25.0
+offset_right = 49.0
+offset_bottom = 48.0
 text = "int"
 label_settings = SubResource("LabelSettings_k8y2p")
 
@@ -179,10 +178,10 @@ label_settings = SubResource("LabelSettings_k8y2p")
 
 [node name="ficha_int" type="TextureRect" parent="PainelPrincipal" unique_id=812012066]
 layout_mode = 0
-offset_left = 527.0
-offset_top = 138.0
-offset_right = 567.0
-offset_bottom = 178.0
+offset_left = 455.0
+offset_top = 167.0
+offset_right = 495.0
+offset_bottom = 207.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -230,7 +229,6 @@ offset_left = 79.0
 offset_top = 100.0
 offset_right = 143.0
 offset_bottom = 117.0
-theme_override_fonts/font = ExtResource("4_h83df")
 theme_override_font_sizes/font_size = 8
 text = "  coletar "
 
@@ -289,7 +287,6 @@ offset_left = 62.0
 offset_top = 88.0
 offset_right = 145.31
 offset_bottom = 90.875
-theme_override_fonts/font = ExtResource("4_h83df")
 theme_override_font_sizes/font_size = 10
 text = "tentar novamente"
 

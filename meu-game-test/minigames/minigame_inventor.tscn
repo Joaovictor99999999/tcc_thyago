@@ -1,0 +1,901 @@
+[gd_scene format=3 uid="uid://c2ksftrhbsor6"]
+
+[ext_resource type="Texture2D" uid="uid://bpps2pniwrj7g" path="res://minigames/blurred_background_min.png" id="1_reo1x"]
+[ext_resource type="Texture2D" uid="uid://b6neddfrc3eda" path="res://minigames/Workbench.png" id="2_adfsy"]
+[ext_resource type="Texture2D" uid="uid://pqdde58q1xfd" path="res://minigames/Esoteric (5).png" id="3_adfsy"]
+[ext_resource type="Script" uid="uid://cgoxw4toe25ts" path="res://minigames/gerenciador_de_fases.gd" id="3_ailbb"]
+[ext_resource type="Texture2D" uid="uid://cx7dw1opfy4gf" path="res://minigames/New Piskel (8) (1).png" id="4_b4xph"]
+[ext_resource type="Script" uid="uid://dpu3o815ravag" path="res://minigames/fase_macro.gd" id="4_bmv01"]
+[ext_resource type="Texture2D" uid="uid://72fq8rrx8bt1" path="res://minigames/Furniture 5.png" id="5_f5kk0"]
+[ext_resource type="Script" uid="uid://vlypyaql88k2" path="res://minigames/botao.gd" id="5_s0sin"]
+[ext_resource type="Script" uid="uid://c1eb4p1ifjl1x" path="res://minigames/SlotDestino.gd" id="6_m47wc"]
+[ext_resource type="Texture2D" uid="uid://by2yyt5bjlx3m" path="res://minigames/Furniture (4).png" id="7_38avk"]
+[ext_resource type="Texture2D" uid="uid://b11e05jqhkwyd" path="res://minigames/Tools1.png" id="9_odrrf"]
+[ext_resource type="Texture2D" uid="uid://c1hd8hqi7uywy" path="res://minigames/New Piskel (6) (8).png" id="11_yj810"]
+[ext_resource type="Texture2D" uid="uid://bvxaxveo1rysq" path="res://minigames/Tools2.png" id="12_de7e3"]
+[ext_resource type="Texture2D" uid="uid://c46abt57lcpdi" path="res://minigames/Level_6.png" id="13_b814i"]
+[ext_resource type="Texture2D" uid="uid://q12x7xrdag5i" path="res://minigames/Level_3.png" id="14_b7fcx"]
+[ext_resource type="Texture2D" uid="uid://b3emcf0omvwxe" path="res://minigames/Tools.png" id="15_m47wc"]
+[ext_resource type="Texture2D" uid="uid://dprof5115ux7o" path="res://minigames/Level_5.png" id="15_q7q1b"]
+[ext_resource type="Texture2D" uid="uid://bg5rn14b2ip2m" path="res://minigames/Level_2.png" id="16_to205"]
+[ext_resource type="Texture2D" uid="uid://bsm0gfbwvo2ug" path="res://minigames/Esoteric.png" id="17_to205"]
+[ext_resource type="Texture2D" uid="uid://b6iagag3tsjf" path="res://minigames/Furniture (5).png" id="18_s0sin"]
+[ext_resource type="Texture2D" uid="uid://dhp3sssrv6c3u" path="res://minigames/New Piskel (6) (1).png" id="19_pa2oq"]
+[ext_resource type="Texture2D" uid="uid://d3qmxm23imvyw" path="res://minigames/Esoteric (5) (2).png" id="19_yj810"]
+[ext_resource type="Script" uid="uid://ds3agvy5jfj8n" path="res://minigames/verificar.gd" id="24_m47wc"]
+[ext_resource type="Texture2D" uid="uid://buk8yj2v8ia1e" path="res://minigames/New Piskel (10).png" id="26_32pp3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_to205"]
+font_size = 8
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emxq5"]
+load_path = "res://.godot/imported/New Piskel (6) (10).png-ef7b6b2cabd8f501adeae3265a1f6d95.ctex"
+
+[node name="MinigameInventor" type="Node2D" unique_id=1746354813]
+
+[node name="FundoMesa" type="TextureRect" parent="." unique_id=1267834767]
+offset_left = -15.0
+offset_top = -4.0
+offset_right = 379.0
+offset_bottom = 193.0
+mouse_filter = 2
+texture = ExtResource("1_reo1x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GerenciadorDeFases" type="Node" parent="." unique_id=976196868]
+script = ExtResource("3_ailbb")
+
+[node name="FASES" type="Control" parent="." unique_id=1757747918 groups=["fases"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -2.0
+offset_right = 349.0
+offset_bottom = 193.0
+mouse_filter = 2
+
+[node name="Macro" type="NinePatchRect" parent="FASES" unique_id=191027066]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 9.025001
+anchor_bottom = 4.5
+offset_top = -1.0
+offset_right = -3.0517578e-05
+script = ExtResource("4_bmv01")
+
+[node name="Slots" type="Control" parent="FASES/Macro" unique_id=851216423]
+z_index = 1
+anchors_preset = 0
+offset_left = 89.0
+offset_top = 117.0
+offset_right = 397.0
+offset_bottom = 217.0
+mouse_filter = 2
+
+[node name="Slot1" type="TextureRect" parent="FASES/Macro/Slots" unique_id=1153230492 groups=["Macro"]]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 38.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "1"
+
+[node name="Slot2" type="TextureRect" parent="FASES/Macro/Slots" unique_id=1847832127 groups=["Macro"]]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 14.0
+offset_right = 95.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "2"
+
+[node name="Slot3" type="TextureRect" parent="FASES/Macro/Slots" unique_id=1097246772 groups=["Macro"]]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 14.0
+offset_right = 152.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="botoes" type="Control" parent="FASES/Macro" unique_id=1626460738]
+z_index = 1
+anchors_preset = 0
+offset_left = 108.0
+offset_top = 140.0
+offset_right = 274.0
+offset_bottom = 167.0
+mouse_filter = 2
+
+[node name="botao1" type="TextureRect" parent="FASES/Macro/botoes" unique_id=443764627 groups=["botoes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 2.0830002
+offset_left = 187.0
+offset_top = -70.0
+offset_right = 187.438
+offset_bottom = -105.241005
+texture = ExtResource("5_f5kk0")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "3"
+
+[node name="botao2" type="TextureRect" parent="FASES/Macro/botoes" unique_id=138486439 groups=["botoes"]]
+layout_mode = 0
+offset_left = 187.0
+offset_top = -35.0
+offset_right = 213.0
+offset_bottom = -13.0
+texture = ExtResource("15_m47wc")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "1"
+
+[node name="botao3" type="TextureRect" parent="FASES/Macro/botoes" unique_id=1388274030 groups=["botoes"]]
+layout_mode = 0
+offset_left = 187.0
+offset_top = -3.0
+offset_right = 213.0
+offset_bottom = 21.0
+texture = ExtResource("7_38avk")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "2"
+
+[node name="planoPonte" type="Sprite2D" parent="FASES/Macro" unique_id=2033775503]
+z_index = 1
+position = Vector2(129, 87)
+scale = Vector2(1.8300806, 1.0548244)
+texture = ExtResource("3_adfsy")
+
+[node name="LabelFundacao" type="Label" parent="FASES/Macro" unique_id=201827162]
+z_index = 1
+layout_mode = 0
+offset_left = 147.0
+offset_top = 159.0
+offset_right = 202.0
+offset_bottom = 182.0
+text = "fundaçao"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelEstrutura" type="Label" parent="FASES/Macro" unique_id=1407585757]
+z_index = 1
+layout_mode = 0
+offset_left = 201.0
+offset_top = 159.0
+offset_right = 256.0
+offset_bottom = 182.0
+text = "estrutura"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelFinalizacao" type="Label" parent="FASES/Macro" unique_id=833198733]
+z_index = 1
+layout_mode = 0
+offset_left = 87.0
+offset_top = 159.0
+offset_right = 142.0
+offset_bottom = 182.0
+text = "finalizaçao"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="TextureRect" type="NinePatchRect" parent="FASES/Macro" unique_id=1880869585]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 39.0
+offset_right = 426.0
+offset_bottom = 321.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_yj810")
+
+[node name="FundoMesa2" type="TextureRect" parent="FASES/Macro" unique_id=1735614203]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -15.0
+offset_right = 316.0
+offset_bottom = 123.0
+texture = ExtResource("2_adfsy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NinePatchRect" type="NinePatchRect" parent="FASES/Macro" unique_id=134394857]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 119.0
+offset_right = 569.99994
+offset_bottom = 264.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("CompressedTexture2D_emxq5")
+
+[node name="Slot4" type="TextureRect" parent="FASES/Macro" unique_id=424260173]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 134.0
+offset_right = 329.0
+offset_bottom = 165.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot5" type="TextureRect" parent="FASES/Macro" unique_id=798517348]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 100.0
+offset_right = 329.0
+offset_bottom = 131.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot6" type="TextureRect" parent="FASES/Macro" unique_id=1561424672]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 65.0
+offset_right = 329.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Label2" type="Label" parent="FASES/Macro" unique_id=1169087274]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 41.0
+offset_right = 335.0
+offset_bottom = 89.0
+text = "itens"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="Fundacao" type="NinePatchRect" parent="FASES" unique_id=1461019412]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 9.025001
+anchor_bottom = 4.5
+offset_top = -1.0
+offset_right = -3.0517578e-05
+mouse_filter = 1
+script = ExtResource("4_bmv01")
+
+[node name="Slots" type="Control" parent="FASES/Fundacao" unique_id=1836480639]
+z_index = 1
+anchors_preset = 0
+offset_left = 89.0
+offset_top = 117.0
+offset_right = 397.0
+offset_bottom = 217.0
+mouse_filter = 2
+
+[node name="Slot1" type="TextureRect" parent="FASES/Fundacao/Slots" unique_id=1969555547 groups=["Fundacao"]]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 38.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "1"
+
+[node name="Slot2" type="TextureRect" parent="FASES/Fundacao/Slots" unique_id=1485237874 groups=["Fundacao"]]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 14.0
+offset_right = 95.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "2"
+
+[node name="Slot3" type="TextureRect" parent="FASES/Fundacao/Slots" unique_id=1892293825 groups=["Fundacao"]]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 14.0
+offset_right = 152.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="botoes" type="Control" parent="FASES/Fundacao" unique_id=337156440]
+z_index = 1
+anchors_preset = 0
+offset_left = 112.0
+offset_top = 135.0
+offset_right = 278.0
+offset_bottom = 162.0
+mouse_filter = 2
+
+[node name="botao1" type="TextureRect" parent="FASES/Fundacao/botoes" unique_id=870338201 groups=["botoes"]]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 2.0830002
+offset_left = 183.0
+offset_top = -66.0
+offset_right = 183.438
+offset_bottom = -101.241005
+texture = ExtResource("15_m47wc")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "2"
+
+[node name="botao2" type="TextureRect" parent="FASES/Fundacao/botoes" unique_id=1154611794 groups=["botoes"]]
+layout_mode = 0
+offset_left = 183.0
+offset_top = -30.0
+offset_right = 209.0
+offset_bottom = -8.0
+texture = ExtResource("12_de7e3")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "1"
+
+[node name="botao3" type="TextureRect" parent="FASES/Fundacao/botoes" unique_id=1136283012 groups=["botoes"]]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 1.0
+offset_right = 210.0
+offset_bottom = 25.0
+texture = ExtResource("9_odrrf")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "3"
+
+[node name="planoPonte" type="Sprite2D" parent="FASES/Fundacao" unique_id=145665216]
+z_index = 1
+position = Vector2(165.00002, 67)
+scale = Vector2(1.8300806, 1.2105263)
+texture = ExtResource("19_yj810")
+
+[node name="LabelFundacao" type="Label" parent="FASES/Fundacao" unique_id=1586990061]
+z_index = 1
+layout_mode = 0
+offset_left = 147.0
+offset_top = 159.0
+offset_right = 202.0
+offset_bottom = 182.0
+text = "Assentar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelEstrutura" type="Label" parent="FASES/Fundacao" unique_id=1114974651]
+z_index = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 159.0
+offset_right = 255.0
+offset_bottom = 182.0
+text = "acimentar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelFinalizacao" type="Label" parent="FASES/Fundacao" unique_id=242327200]
+z_index = 1
+layout_mode = 0
+offset_left = 93.0
+offset_top = 159.0
+offset_right = 148.0
+offset_bottom = 186.0
+text = "Escavar
+"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="CaixaItem" type="NinePatchRect" parent="FASES/Fundacao" unique_id=1081239396]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 39.0
+offset_right = 426.0
+offset_bottom = 321.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_yj810")
+
+[node name="prancheta" type="TextureRect" parent="FASES/Fundacao" unique_id=743539431]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 7.0
+offset_right = 267.0
+offset_bottom = 118.0
+texture = ExtResource("19_pa2oq")
+
+[node name="mesaSlot" type="NinePatchRect" parent="FASES/Fundacao" unique_id=964042791]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 119.0
+offset_right = 569.99994
+offset_bottom = 264.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("CompressedTexture2D_emxq5")
+
+[node name="Slot4" type="TextureRect" parent="FASES/Fundacao" unique_id=213248757]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 134.0
+offset_right = 329.0
+offset_bottom = 165.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot5" type="TextureRect" parent="FASES/Fundacao" unique_id=593368137]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 100.0
+offset_right = 329.0
+offset_bottom = 131.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot6" type="TextureRect" parent="FASES/Fundacao" unique_id=2120675778]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 65.0
+offset_right = 329.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Label2" type="Label" parent="FASES/Fundacao" unique_id=533014426]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 41.0
+offset_right = 335.0
+offset_bottom = 89.0
+text = "itens"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="Estrutura" type="NinePatchRect" parent="FASES" unique_id=804029421]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 9.025001
+anchor_bottom = 4.5
+offset_top = -1.0
+offset_right = -3.0517578e-05
+mouse_filter = 1
+script = ExtResource("4_bmv01")
+
+[node name="Slots" type="Control" parent="FASES/Estrutura" unique_id=956836709]
+z_index = 1
+anchors_preset = 0
+offset_left = 89.0
+offset_top = 117.0
+offset_right = 397.0
+offset_bottom = 217.0
+mouse_filter = 1
+
+[node name="Slot1" type="TextureRect" parent="FASES/Estrutura/Slots" unique_id=795934883 groups=["Estrutura"]]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 38.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "1"
+
+[node name="Slot2" type="TextureRect" parent="FASES/Estrutura/Slots" unique_id=2066550746 groups=["Estrutura"]]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 14.0
+offset_right = 95.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "2"
+
+[node name="Slot3" type="TextureRect" parent="FASES/Estrutura/Slots" unique_id=1058158855 groups=["Estrutura"]]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 14.0
+offset_right = 152.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="botoes" type="Control" parent="FASES/Estrutura" unique_id=1512772469]
+z_index = 1
+anchors_preset = 0
+offset_left = 112.0
+offset_top = 135.0
+offset_right = 278.0
+offset_bottom = 162.0
+mouse_filter = 1
+
+[node name="botao1" type="TextureRect" parent="FASES/Estrutura/botoes" unique_id=1638757883 groups=["botoes"]]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 2.0830002
+offset_left = 187.0
+offset_top = -66.0
+offset_right = 179.438
+offset_bottom = -101.241005
+texture = ExtResource("13_b814i")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "3"
+
+[node name="botao2" type="TextureRect" parent="FASES/Estrutura/botoes" unique_id=1902527223 groups=["botoes"]]
+layout_mode = 0
+offset_left = 183.0
+offset_top = -30.0
+offset_right = 209.0
+offset_bottom = -8.0
+texture = ExtResource("15_q7q1b")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "2"
+
+[node name="botao3" type="TextureRect" parent="FASES/Estrutura/botoes" unique_id=1819765254 groups=["botoes"]]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 1.0
+offset_right = 210.0
+offset_bottom = 25.0
+texture = ExtResource("16_to205")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "1"
+
+[node name="planoPonte" type="Sprite2D" parent="FASES/Estrutura" unique_id=2109800208]
+z_index = 1
+position = Vector2(165.00002, 67)
+scale = Vector2(1.8300806, 1.2105263)
+texture = ExtResource("19_yj810")
+
+[node name="LabelFundacao" type="Label" parent="FASES/Estrutura" unique_id=1090987726]
+z_index = 1
+layout_mode = 0
+offset_left = 152.0
+offset_top = 159.0
+offset_right = 207.0
+offset_bottom = 182.0
+text = "Serrar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelEstrutura" type="Label" parent="FASES/Estrutura" unique_id=2047067908]
+z_index = 1
+layout_mode = 0
+offset_left = 210.0
+offset_top = 159.0
+offset_right = 265.0
+offset_bottom = 182.0
+text = "Fixar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelFinalizacao" type="Label" parent="FASES/Estrutura" unique_id=613115053]
+z_index = 1
+layout_mode = 0
+offset_left = 95.0
+offset_top = 159.0
+offset_right = 150.0
+offset_bottom = 182.0
+text = "Cortar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="CaixaItem" type="NinePatchRect" parent="FASES/Estrutura" unique_id=1730639354]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 39.0
+offset_right = 426.0
+offset_bottom = 321.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_yj810")
+
+[node name="prancheta" type="TextureRect" parent="FASES/Estrutura" unique_id=1511873742]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 7.0
+offset_right = 267.0
+offset_bottom = 118.0
+texture = ExtResource("19_pa2oq")
+
+[node name="mesaSlot" type="NinePatchRect" parent="FASES/Estrutura" unique_id=720584274]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 119.0
+offset_right = 569.99994
+offset_bottom = 264.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("CompressedTexture2D_emxq5")
+
+[node name="Slot4" type="TextureRect" parent="FASES/Estrutura" unique_id=826579763]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 134.0
+offset_right = 329.0
+offset_bottom = 165.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot5" type="TextureRect" parent="FASES/Estrutura" unique_id=2060618162]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 100.0
+offset_right = 329.0
+offset_bottom = 131.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot6" type="TextureRect" parent="FASES/Estrutura" unique_id=1512954819]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 65.0
+offset_right = 329.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Label2" type="Label" parent="FASES/Estrutura" unique_id=1706941964]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 41.0
+offset_right = 335.0
+offset_bottom = 89.0
+text = "itens"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="Finalizacao" type="NinePatchRect" parent="FASES" unique_id=1188232127]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 9.025001
+anchor_bottom = 4.5
+offset_top = -1.0
+offset_right = -3.0517578e-05
+mouse_filter = 1
+script = ExtResource("4_bmv01")
+
+[node name="Slots" type="Control" parent="FASES/Finalizacao" unique_id=908490621]
+z_index = 1
+anchors_preset = 0
+offset_left = 89.0
+offset_top = 117.0
+offset_right = 397.0
+offset_bottom = 217.0
+mouse_filter = 1
+
+[node name="Slot1" type="TextureRect" parent="FASES/Finalizacao/Slots" unique_id=1489674217 groups=["Finalizacao"]]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 38.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "1"
+
+[node name="Slot2" type="TextureRect" parent="FASES/Finalizacao/Slots" unique_id=722414882 groups=["Finalizacao"]]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 14.0
+offset_right = 95.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "2"
+
+[node name="Slot3" type="TextureRect" parent="FASES/Finalizacao/Slots" unique_id=1394375980 groups=["Finalizacao"]]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 14.0
+offset_right = 152.0
+offset_bottom = 45.0
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="botoes" type="Control" parent="FASES/Finalizacao" unique_id=1191522370]
+z_index = 1
+anchors_preset = 0
+offset_left = 112.0
+offset_top = 135.0
+offset_right = 278.0
+offset_bottom = 162.0
+mouse_filter = 1
+
+[node name="botao1" type="TextureRect" parent="FASES/Finalizacao/botoes" unique_id=997174230 groups=["botoes"]]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 2.0830002
+offset_left = 185.0
+offset_top = -66.0
+offset_right = 180.938
+offset_bottom = -101.241005
+texture = ExtResource("14_b7fcx")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "2"
+
+[node name="botao2" type="TextureRect" parent="FASES/Finalizacao/botoes" unique_id=1677533878 groups=["botoes"]]
+layout_mode = 0
+offset_left = 183.0
+offset_top = -30.0
+offset_right = 209.0
+offset_bottom = -8.0
+texture = ExtResource("17_to205")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "3"
+
+[node name="botao3" type="TextureRect" parent="FASES/Finalizacao/botoes" unique_id=463005673 groups=["botoes"]]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 3.0
+offset_right = 210.0
+offset_bottom = 25.0
+texture = ExtResource("18_s0sin")
+expand_mode = 1
+script = ExtResource("5_s0sin")
+id_parte = "1"
+
+[node name="planoPonte" type="Sprite2D" parent="FASES/Finalizacao" unique_id=1065184951]
+z_index = 1
+position = Vector2(165.00002, 67)
+scale = Vector2(1.8300806, 1.2105263)
+texture = ExtResource("19_yj810")
+
+[node name="LabelFundacao" type="Label" parent="FASES/Finalizacao" unique_id=1629030485]
+z_index = 1
+layout_mode = 0
+offset_left = 151.0
+offset_top = 159.0
+offset_right = 206.0
+offset_bottom = 182.0
+text = "Pregar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelEstrutura" type="Label" parent="FASES/Finalizacao" unique_id=469824868]
+z_index = 1
+layout_mode = 0
+offset_left = 213.0
+offset_top = 159.0
+offset_right = 268.0
+offset_bottom = 182.0
+text = "selo"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="LabelFinalizacao" type="Label" parent="FASES/Finalizacao" unique_id=577400716]
+z_index = 1
+layout_mode = 0
+offset_left = 93.0
+offset_top = 159.0
+offset_right = 148.0
+offset_bottom = 182.0
+text = "Tabuar"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="CaixaItem" type="NinePatchRect" parent="FASES/Finalizacao" unique_id=1478215597]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 39.0
+offset_right = 426.0
+offset_bottom = 321.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_yj810")
+
+[node name="prancheta" type="TextureRect" parent="FASES/Finalizacao" unique_id=1966880425]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 7.0
+offset_right = 267.0
+offset_bottom = 118.0
+texture = ExtResource("19_pa2oq")
+
+[node name="mesaSlot" type="NinePatchRect" parent="FASES/Finalizacao" unique_id=1690125162]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 119.0
+offset_right = 569.99994
+offset_bottom = 264.0
+scale = Vector2(0.4, 0.4)
+texture = SubResource("CompressedTexture2D_emxq5")
+
+[node name="Slot4" type="TextureRect" parent="FASES/Finalizacao" unique_id=2046514782]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 134.0
+offset_right = 329.0
+offset_bottom = 165.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot5" type="TextureRect" parent="FASES/Finalizacao" unique_id=1781300577]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 100.0
+offset_right = 329.0
+offset_bottom = 131.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Slot6" type="TextureRect" parent="FASES/Finalizacao" unique_id=134376927]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 65.0
+offset_right = 329.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("4_b4xph")
+expand_mode = 1
+script = ExtResource("6_m47wc")
+id_correto = "3"
+
+[node name="Label2" type="Label" parent="FASES/Finalizacao" unique_id=357272507]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 41.0
+offset_right = 335.0
+offset_bottom = 89.0
+text = "itens"
+label_settings = SubResource("LabelSettings_to205")
+
+[node name="verificar" type="Button" parent="." unique_id=610406399]
+z_index = 2
+offset_left = 248.0
+offset_right = 326.0
+offset_bottom = 39.0
+icon = ExtResource("26_32pp3")
+flat = true
+script = ExtResource("24_m47wc")
+
+[node name="Label" type="Label" parent="verificar" unique_id=58740421]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 14.0
+offset_right = 61.0
+offset_bottom = 45.0
+text = "verificar
+"
+label_settings = SubResource("LabelSettings_to205")

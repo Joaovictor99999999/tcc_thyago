@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bc8hqxva5ax7h"]
+
+[ext_resource type="Texture2D" uid="uid://sbc1lqmeko3v" path="res://outros/Sem título (3).png" id="1_rh14k"]
+[ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="2_kyn48"]
+[ext_resource type="Texture2D" uid="uid://bfs25ajbbxobg" path="res://outros/New Piskel (3) (1) (4).png" id="3_oi7g3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oi7g3"]
+font = ExtResource("2_kyn48")
+font_color = Color(0.42870766, 0.30110183, 0.12897015, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_4rbkc"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_pt1ru"]
+resource_name = "interface"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0noqu"]
+_data = {
+&"RESET": SubResource("Animation_4rbkc"),
+&"interface": SubResource("Animation_pt1ru")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1097605121]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1183521761]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1026624028]
+anchors_preset = -1
+anchor_right = 0.99200004
+anchor_bottom = 0.98300004
+offset_right = 3.8799744
+offset_bottom = 4.0599976
+texture = ExtResource("1_rh14k")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1319400789]
+offset_left = 72.0
+offset_top = 67.0
+offset_right = 298.0
+offset_bottom = 166.0
+text = "start"
+label_settings = SubResource("LabelSettings_oi7g3")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1246914567]
+position = Vector2(181.5, 79.5)
+scale = Vector2(3.6100004, 4.1)
+texture = ExtResource("3_oi7g3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=528338964]
+libraries/ = SubResource("AnimationLibrary_0noqu")

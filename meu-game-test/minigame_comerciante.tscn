@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d4nvuxhewj2nq"]
+
+[ext_resource type="Texture2D" uid="uid://jdxoh4xe7ry8" path="res://minigames/Captura de tela 2026-03-25 230127.png" id="1_4gnss"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1655900083]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -389.0
+offset_top = -145.0
+offset_right = 362.0
+offset_bottom = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4gnss")

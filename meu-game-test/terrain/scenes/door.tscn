@@ -69,7 +69,7 @@ texture = ExtResource("2_hymuh")
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1860476996]
-position = Vector2(188, 84.5)
+position = Vector2(188, 81)
 shape = SubResource("RectangleShape2D_hymuh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=287334910]

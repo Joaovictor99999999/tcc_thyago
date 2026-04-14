@@ -3,15 +3,18 @@
 [ext_resource type="Script" uid="uid://eorslohtqdxr" path="res://dialogue_box.gd" id="1_nhbm5"]
 [ext_resource type="Texture2D" uid="uid://cujsp2ogygr6i" path="res://character/assets/vovo.png" id="2_ms2fb"]
 [ext_resource type="Texture2D" uid="uid://5is5xhgcp41n" path="res://character/assets/New Piskel (4).png" id="2_nhbm5"]
-[ext_resource type="FontFile" uid="uid://chfl2espt2lye" path="res://Minecraft.ttf" id="3_jggvb"]
+[ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="4_ms2fb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ms2fb"]
 texture = ExtResource("2_nhbm5")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ms2fb"]
-font = ExtResource("3_jggvb")
+font = ExtResource("4_ms2fb")
 font_size = 14
-font_color = Color(0.58431375, 0.58431375, 0.58431375, 1)
+font_color = Color(0.44022286, 0.43013388, 0.4234118, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="DialogueBox" type="CanvasLayer" unique_id=495837444]
@@ -58,6 +61,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer" unique_id=1086852110]
 layout_mode = 2
+text = "ola passageiro"
 label_settings = SubResource("LabelSettings_ms2fb")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -72,4 +76,4 @@ color = Color(0, 0, 0, 0.3019608)
 
 [node name="Timer" type="Timer" parent="Control" unique_id=1084669350]
 process_mode = 3
-wait_time = 0.030000000000000002
+wait_time = 0.03

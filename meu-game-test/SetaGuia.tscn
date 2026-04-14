@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bitoq5dbnqcoa"]
+
+[ext_resource type="Texture2D" uid="uid://eq87xxs2bal8" path="res://outros/New Piskel (9).png" id="1_30h4c"]
+[ext_resource type="Script" uid="uid://d1ytcapbwf12c" path="res://SetaGuia.gd" id="2_wmo07"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_30h4c"]
+radius = 16.27882
+
+[node name="Node2D" type="Area2D" unique_id=2117716035]
+script = ExtResource("2_wmo07")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=614018733]
+position = Vector2(155, 104)
+texture = ExtResource("1_30h4c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1073283080]
+position = Vector2(153, 101)
+shape = SubResource("CircleShape2D_30h4c")

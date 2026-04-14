@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://omy0k70ts0j2" path="res://character/scripts/character.gd" id="1_hg145"]
 [ext_resource type="Texture2D" uid="uid://ckp22ts5vbeu" path="res://character/assets/texture.png" id="1_p3kou"]
+[ext_resource type="Script" uid="uid://d1ytcapbwf12c" path="res://SetaGuia.gd" id="3_3rmcm"]
+[ext_resource type="Texture2D" uid="uid://eq87xxs2bal8" path="res://outros/New Piskel (9).png" id="3_r0tgy"]
 
 [sub_resource type="Animation" id="Animation_p3kou"]
 length = 0.001
@@ -396,7 +398,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0m4l"]
-size = Vector2(14, 5)
+size = Vector2(15, 8)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_deaer"]
 animation = &"idle_up"
@@ -449,6 +451,8 @@ states/idle/position = Vector2(422.8, 66.4)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_deaer")
 states/walk/position = Vector2(454.96, 193.6)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3rmcm"]
+
 [node name="Character" type="CharacterBody2D" unique_id=642945273 node_paths=PackedStringArray("_animation_tree")]
 process_mode = 3
 script = ExtResource("1_hg145")
@@ -460,7 +464,7 @@ _animation_tree = NodePath("AnimationTree")
 libraries/ = SubResource("AnimationLibrary_ql5yu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2141630214]
-position = Vector2(10, 2)
+position = Vector2(14.5, -7)
 shape = SubResource("RectangleShape2D_m0m4l")
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1151760515]
@@ -475,3 +479,14 @@ tree_root = SubResource("AnimationNodeStateMachine_b3c7o")
 anim_player = NodePath("../AnimationPlayer")
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2146990969 node_paths=PackedStringArray("lista_npcs")]
+position = Vector2(15, -50)
+script = ExtResource("3_3rmcm")
+lista_npcs = [null, null, null]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=332706826]
+texture = ExtResource("3_r0tgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=89020617]
+shape = SubResource("CircleShape2D_3rmcm")
