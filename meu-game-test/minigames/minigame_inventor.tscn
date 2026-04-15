@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c2ksftrhbsor6"]
+[gd_scene format=3 uid="uid://8umehphq3djl"]
 
 [ext_resource type="Texture2D" uid="uid://bpps2pniwrj7g" path="res://minigames/blurred_background_min.png" id="1_reo1x"]
 [ext_resource type="Texture2D" uid="uid://b6neddfrc3eda" path="res://minigames/Workbench.png" id="2_adfsy"]
@@ -22,8 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://b6iagag3tsjf" path="res://minigames/Furniture (5).png" id="18_s0sin"]
 [ext_resource type="Texture2D" uid="uid://dhp3sssrv6c3u" path="res://minigames/New Piskel (6) (1).png" id="19_pa2oq"]
 [ext_resource type="Texture2D" uid="uid://d3qmxm23imvyw" path="res://minigames/Esoteric (5) (2).png" id="19_yj810"]
+[ext_resource type="Texture2D" uid="uid://csm201m1ks5q5" path="res://minigames/botao2.png" id="23_4s77k"]
+[ext_resource type="Texture2D" uid="uid://dnpl6he6rc2jt" path="res://minigames/botao3.png" id="24_1ly1t"]
 [ext_resource type="Script" uid="uid://ds3agvy5jfj8n" path="res://minigames/verificar.gd" id="24_m47wc"]
-[ext_resource type="Texture2D" uid="uid://buk8yj2v8ia1e" path="res://minigames/New Piskel (10).png" id="26_32pp3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_to205"]
 font_size = 8
@@ -33,7 +34,7 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emxq5"]
 load_path = "res://.godot/imported/New Piskel (6) (10).png-ef7b6b2cabd8f501adeae3265a1f6d95.ctex"
 
-[node name="MinigameInventor" type="Node2D" unique_id=1746354813]
+[node name="MinigameInventor" type="CanvasLayer" unique_id=2105346908]
 
 [node name="FundoMesa" type="TextureRect" parent="." unique_id=1267834767]
 offset_left = -15.0
@@ -58,7 +59,6 @@ offset_bottom = 193.0
 mouse_filter = 2
 
 [node name="Macro" type="NinePatchRect" parent="FASES" unique_id=191027066]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 9.025001
@@ -677,6 +677,7 @@ text = "itens"
 label_settings = SubResource("LabelSettings_to205")
 
 [node name="Finalizacao" type="NinePatchRect" parent="FASES" unique_id=1188232127]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 9.025001
@@ -881,21 +882,22 @@ offset_bottom = 89.0
 text = "itens"
 label_settings = SubResource("LabelSettings_to205")
 
-[node name="verificar" type="Button" parent="." unique_id=610406399]
+[node name="verificar" type="TextureButton" parent="." unique_id=178581361]
 z_index = 2
-offset_left = 248.0
-offset_right = 326.0
-offset_bottom = 39.0
-icon = ExtResource("26_32pp3")
-flat = true
+offset_left = 252.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 42.0
+texture_normal = ExtResource("23_4s77k")
+texture_pressed = ExtResource("24_1ly1t")
 script = ExtResource("24_m47wc")
 
 [node name="Label" type="Label" parent="verificar" unique_id=58740421]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 14.0
-offset_right = 61.0
-offset_bottom = 45.0
+offset_left = 19.0
+offset_top = 10.0
+offset_right = 59.0
+offset_bottom = 41.0
 text = "verificar
 "
 label_settings = SubResource("LabelSettings_to205")
