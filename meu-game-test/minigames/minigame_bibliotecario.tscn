@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://jio6c36c4bqw"]
 
 [ext_resource type="Script" uid="uid://rsnpq1r8ektm" path="res://minigames/minigame_bibliotecario.gd" id="1_0340w"]
-[ext_resource type="Texture2D" uid="uid://bnn2a23numaif" path="res://minigames/Captura de tela 2026-03-25 002152.png" id="2_4tjph"]
+[ext_resource type="Texture2D" uid="uid://chys5trerff4v" path="res://minigames/game1.png" id="2_4tjph"]
 [ext_resource type="Script" uid="uid://cx2jm4sh82ip6" path="res://minigames/ficha.gd" id="3_ga4c0"]
 [ext_resource type="Texture2D" uid="uid://diwu2jqa26r0" path="res://minigames/New Piskel (2) (1).png" id="3_kgdfs"]
-[ext_resource type="Texture2D" uid="uid://ciyxytcekychf" path="res://minigames/Furniture.png" id="3_y8dat"]
 [ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="5_4tjph"]
+[ext_resource type="Texture2D" uid="uid://duvycnmpam8yu" path="res://minigames/livro.png" id="6_7y55t"]
 [ext_resource type="Script" uid="uid://dc3qpcpimp8x1" path="res://minigames/bau.gd" id="6_k8y2p"]
 [ext_resource type="Texture2D" uid="uid://df2xvctdg34v2" path="res://minigames/New Piskel (3) (1).png" id="8_53pc7"]
 [ext_resource type="Texture2D" uid="uid://bsm0gfbwvo2ug" path="res://minigames/Esoteric.png" id="9_53pc7"]
@@ -58,10 +58,10 @@ script = ExtResource("1_0340w")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -263.0
-offset_top = -29.0
-offset_right = 329.0
-offset_bottom = 58.0
+offset_left = -306.0
+offset_top = -2.0
+offset_right = 286.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4tjph")
@@ -70,10 +70,10 @@ stretch_mode = 5
 
 [node name="ficha_string" type="TextureRect" parent="PainelPrincipal" unique_id=855334787]
 layout_mode = 0
-offset_left = 367.0
-offset_top = 167.0
-offset_right = 407.0
-offset_bottom = 207.0
+offset_left = 435.0
+offset_top = 63.0
+offset_right = 475.0
+offset_bottom = 103.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -91,10 +91,10 @@ label_settings = SubResource("LabelSettings_vynt2")
 
 [node name="ficha_float" type="TextureRect" parent="PainelPrincipal" unique_id=2053865720]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 155.0
-offset_right = 450.0
-offset_bottom = 195.0
+offset_left = 480.0
+offset_top = 56.0
+offset_right = 520.0
+offset_bottom = 96.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -112,16 +112,17 @@ label_settings = SubResource("LabelSettings_53pc7")
 
 [node name="bau1" type="TextureRect" parent="PainelPrincipal" unique_id=1486099515]
 layout_mode = 0
-offset_left = 321.0
-offset_top = 120.0
-offset_right = 353.0
-offset_bottom = 167.0
+offset_left = 435.0
+offset_top = 124.0
+offset_right = 476.0
+offset_bottom = 159.0
 mouse_filter = 0
-texture = ExtResource("3_y8dat")
+texture = ExtResource("6_7y55t")
 script = ExtResource("6_k8y2p")
 tipo_esperado = "FLOAT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau1" unique_id=562863098]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = 29.0
@@ -134,16 +135,17 @@ label_settings = SubResource("LabelSettings_ga4c0")
 
 [node name="bau2" type="TextureRect" parent="PainelPrincipal" unique_id=759108782]
 layout_mode = 0
-offset_left = 483.0
-offset_top = 121.0
-offset_right = 515.0
-offset_bottom = 166.0
+offset_left = 480.0
+offset_top = 115.0
+offset_right = 522.0
+offset_bottom = 150.0
 mouse_filter = 0
-texture = ExtResource("3_y8dat")
+texture = ExtResource("6_7y55t")
 script = ExtResource("6_k8y2p")
 tipo_esperado = "STRING"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau2" unique_id=1613687031]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = 26.0
@@ -156,16 +158,17 @@ label_settings = SubResource("LabelSettings_0340w")
 
 [node name="bau3" type="TextureRect" parent="PainelPrincipal" unique_id=252319928]
 layout_mode = 0
-offset_left = 548.0
-offset_top = 121.0
-offset_right = 580.0
-offset_bottom = 166.0
+offset_left = 527.0
+offset_top = 125.0
+offset_right = 567.0
+offset_bottom = 159.0
 mouse_filter = 0
-texture = ExtResource("3_y8dat")
+texture = ExtResource("6_7y55t")
 script = ExtResource("6_k8y2p")
 tipo_esperado = "INT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau3" unique_id=218662756]
+visible = false
 layout_mode = 0
 offset_left = 9.0
 offset_top = 25.0
@@ -178,10 +181,10 @@ label_settings = SubResource("LabelSettings_k8y2p")
 
 [node name="ficha_int" type="TextureRect" parent="PainelPrincipal" unique_id=812012066]
 layout_mode = 0
-offset_left = 455.0
-offset_top = 167.0
-offset_right = 495.0
-offset_bottom = 207.0
+offset_left = 523.0
+offset_top = 65.0
+offset_right = 563.0
+offset_bottom = 105.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5

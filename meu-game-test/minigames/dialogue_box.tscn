@@ -34,9 +34,9 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=2138277337]
 texture_filter = 1
 layout_mode = 0
-offset_top = -7.0
-offset_right = 132.0
-offset_bottom = 178.0
+offset_left = 34.0
+offset_right = 141.0
+offset_bottom = 161.0
 texture = ExtResource("2_ms2fb")
 
 [node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1288412882]

@@ -172,7 +172,7 @@ func ganhou_jogo():
 		["Incrível! Você organizou toda a matriz de dados.",
 		"Agora a fazenda está rodando sem bugs!",
 		"Até a próxima!"],
-		preload("res://character/assets/fazendeiro.png")
+		preload("res://character/assets/vovo1.png")
 	)
 
 # --- 🏁 A SOLUÇÃO FINAL ---

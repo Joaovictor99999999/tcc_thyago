@@ -1,28 +1,68 @@
 [gd_scene format=3 uid="uid://bc8hqxva5ax7h"]
 
-[ext_resource type="Texture2D" uid="uid://sbc1lqmeko3v" path="res://outros/Sem título (3).png" id="1_rh14k"]
-[ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="2_kyn48"]
-[ext_resource type="Texture2D" uid="uid://bfs25ajbbxobg" path="res://outros/New Piskel (3) (1) (4).png" id="3_oi7g3"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_oi7g3"]
-font = ExtResource("2_kyn48")
-font_color = Color(0.42870766, 0.30110183, 0.12897015, 1)
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://bpd8fp5rf8lcu" path="res://minigames/Booksheet.png" id="1_kyn48"]
+[ext_resource type="Script" uid="uid://b6xpaqt6minld" path="res://interface.gd" id="1_pt1ru"]
+[ext_resource type="Texture2D" uid="uid://bysxiqn36ld2x" path="res://minigames/New Piskel (14) (3) (1).png" id="3_pt1ru"]
+[ext_resource type="Texture2D" uid="uid://csm201m1ks5q5" path="res://minigames/botao2.png" id="4_0noqu"]
+[ext_resource type="Texture2D" uid="uid://dnpl6he6rc2jt" path="res://minigames/botao3.png" id="5_pxv5b"]
 
 [sub_resource type="Animation" id="Animation_4rbkc"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
 
-[sub_resource type="Animation" id="Animation_pt1ru"]
-resource_name = "interface"
+[sub_resource type="Animation" id="Animation_0noqu"]
+resource_name = "abrir_livro"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_pxv5b"]
+resource_name = "passando_paginas"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999998, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0noqu"]
 _data = {
 &"RESET": SubResource("Animation_4rbkc"),
-&"interface": SubResource("Animation_pt1ru")
+&"abrir_livro": SubResource("Animation_0noqu"),
+&"passando_paginas": SubResource("Animation_pxv5b")
 }
 
 [node name="Node2D" type="Node2D" unique_id=1097605121]
+script = ExtResource("1_pt1ru")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1183521761]
 
@@ -32,21 +72,49 @@ anchor_right = 0.99200004
 anchor_bottom = 0.98300004
 offset_right = 3.8799744
 offset_bottom = 4.0599976
-texture = ExtResource("1_rh14k")
+texture = ExtResource("1_kyn48")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1319400789]
-offset_left = 72.0
-offset_top = 67.0
-offset_right = 298.0
-offset_bottom = 166.0
-text = "start"
-label_settings = SubResource("LabelSettings_oi7g3")
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=940445124]
+position = Vector2(168.00002, 59)
+scale = Vector2(1.7208331, 2.0138886)
+texture = ExtResource("3_pt1ru")
+hframes = 7
+vframes = 2
+frame = 7
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1246914567]
-position = Vector2(181.5, 79.5)
-scale = Vector2(3.6100004, 4.1)
-texture = ExtResource("3_oi7g3")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=528338964]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Sprite2D" unique_id=1384691637]
 libraries/ = SubResource("AnimationLibrary_0noqu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D" unique_id=1716725138]
+texture_filter = 1
+offset_left = 18.014526
+offset_top = -20.048279
+offset_right = 66.82809
+offset_bottom = 34.57242
+theme_override_constants/line_separation = 0
+theme_override_constants/paragraph_separation = 0
+theme_override_constants/shadow_outline_size = 7
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/normal_font_size = 4
+theme_override_font_sizes/bold_font_size = 10
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 9
+text = "Murge – O Fazendeiro
+Na pacata Vila das Variáveis, a vida seguia em ordem até a Grande Tempestade de Bugs. "
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="Começar" type="TextureButton" parent="CanvasLayer" unique_id=1847327137]
+offset_left = 211.0
+offset_top = 114.00001
+offset_right = 281.0
+offset_bottom = 145.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_0noqu")
+texture_pressed = ExtResource("5_pxv5b")
+
+[connection signal="animation_finished" from="CanvasLayer/Sprite2D/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/Começar" to="." method="_on_texture_button_pressed"]

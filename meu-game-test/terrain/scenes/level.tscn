@@ -173,7 +173,7 @@ y_sort_enabled = true
 position = Vector2(393, 416)
 
 [node name="Area2D" parent="ysort/Character" index="5" unique_id=2146990969 node_paths=PackedStringArray("lista_npcs") groups=["seta_guia"]]
-lista_npcs = [NodePath("../../NPC_bibliotecario"), NodePath("../../NPC_fazendeiro"), NodePath("../../NPC_inventor")]
+lista_npcs = [NodePath("../../NPC_bibliotecario"), NodePath("../../NPC_inventor"), NodePath("../../NPC_fazendeiro")]
 
 [node name="Sprite2D" parent="ysort/Character/Area2D" index="0" unique_id=332706826]
 z_index = 1
