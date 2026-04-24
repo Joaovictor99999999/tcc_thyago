@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cbl8ncy8s4d40"]
 
+[ext_resource type="Script" uid="uid://b3bwhh8c38xrp" path="res://terrain/scenes/level.gd" id="1_31mqb"]
 [ext_resource type="PackedScene" uid="uid://do2is7ah85qnk" path="res://terrain/scenes/tile_map.tscn" id="1_fbafv"]
 [ext_resource type="PackedScene" uid="uid://cwn1bijdjd1rp" path="res://character/scenes/character.tscn" id="2_8cw3j"]
 [ext_resource type="PackedScene" uid="uid://do43yeewvqhog" path="res://terrain/scenes/building.tscn" id="2_bw07b"]
@@ -17,9 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://cxeoer5kr40c4" path="res://character/assets/Idle_Down-Sheet (9).png" id="11_6a7cl"]
 [ext_resource type="Texture2D" uid="uid://dlob1p0ncrg43" path="res://character/assets/Idle_Down-Sheet (7).png" id="12_vq6r8"]
 [ext_resource type="PackedScene" uid="uid://brkf50f4ksokm" path="res://terrain/scenes/door.tscn" id="15_vq6r8"]
+[ext_resource type="PackedScene" uid="uid://bc8hqxva5ax7h" path="res://interface.tscn" id="18_be30i"]
 
 [node name="level" type="Node2D" unique_id=912673485]
 position = Vector2(254, -2)
+script = ExtResource("1_31mqb")
 
 [node name="TileMap" parent="." unique_id=1929025874 instance=ExtResource("1_fbafv")]
 position = Vector2(-102, -475)
@@ -170,12 +173,16 @@ layer_7/tile_data = PackedInt32Array(-262146, 983041, 2, -196610, 983041, 3, -13
 [node name="Character" parent="ysort" unique_id=642945273 instance=ExtResource("2_8cw3j")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(393, 416)
+position = Vector2(712, 144)
+
+[node name="CollisionShape2D" parent="ysort/Character" index="2" unique_id=2141630214]
+visible = false
 
 [node name="Area2D" parent="ysort/Character" index="5" unique_id=2146990969 node_paths=PackedStringArray("lista_npcs") groups=["seta_guia"]]
 lista_npcs = [NodePath("../../NPC_bibliotecario"), NodePath("../../NPC_inventor"), NodePath("../../NPC_fazendeiro")]
 
 [node name="Sprite2D" parent="ysort/Character/Area2D" index="0" unique_id=332706826]
+visible = false
 z_index = 1
 
 [node name="plantacao" parent="ysort" unique_id=1792231568 groups=["plantacao"] instance=ExtResource("2_ikpyw")]
@@ -196,6 +203,94 @@ stream = ExtResource("8_tt3re")
 autoplay = true
 parameters/looping = true
 
+[node name="interface" parent="." unique_id=1097605121 instance=ExtResource("18_be30i")]
+process_mode = 3
+z_index = 1000
+position = Vector2(531, 54)
+
+[node name="CanvasLayer" parent="interface" index="0" unique_id=48353954]
+process_mode = 3
+
+[node name="TextureRect" parent="interface/CanvasLayer" index="0" unique_id=1026624028]
+process_mode = 3
+visible = true
+
+[node name="Sprite2D" parent="interface/CanvasLayer" index="1" unique_id=940445124]
+process_mode = 3
+
+[node name="AnimationPlayer" parent="interface/CanvasLayer/Sprite2D" index="0" unique_id=1384691637]
+process_mode = 3
+
+[node name="texto2" parent="interface/CanvasLayer/Sprite2D" index="1" unique_id=250268713]
+process_mode = 3
+offset_left = 19.176748
+offset_top = -22.344833
+offset_right = 266.15015
+offset_bottom = 360.65515
+scale = Vector2(0.2, 0.2)
+text = "A Jornada de Murge
+
+Para reconstruir a ponte e salvar a vila, ele deve buscar a sabedoria perdida com os moradores da vila.
+Entre em cada casa, vença os desafios de lógica e colete os itens necessários para a obra.
+O destino da Vila das Variáveis agora está em suas mãos. Boa sorte!"
+
+[node name="texto1" parent="interface/CanvasLayer/Sprite2D" index="2" unique_id=1193453711]
+process_mode = 3
+offset_right = 206.2955
+scale = Vector2(0.2, 0.2)
+text = "Murge – O Fazendeiro
+
+Na pacata Vila das Variáveis, a vida seguia em ordem até a Grande Tempestade de Bugs.
+O caos destruiu a lendária Ponte do Conhecimento, deixando todos os moradores isolados e sem saída.
+Murge, um jovem fazendeiro famoso por sua organização e lógica impecável, aceitou o chamado para ajudar."
+
+[node name="capa" parent="interface/CanvasLayer/Sprite2D" index="3" unique_id=2087736868]
+process_mode = 3
+
+[node name="texto3" parent="interface/CanvasLayer/Sprite2D" index="4" unique_id=1743901000]
+process_mode = 3
+offset_left = -36.029068
+offset_top = -23.834488
+offset_right = 196.41649
+offset_bottom = 493.16553
+scale = Vector2(0.2, 0.2)
+text = "Página de Tutorial (Controles)
+Como Guiar Murge:
+Utilize as teclas W, A, S, D para caminhar pela Vila das Variáveis. 
+Interagir:
+Pressione Espaço na frente de um Guardião para conversar.
+Diálogos:
+Pressione Espaço ou Enter para avançar as falas e explicações.
+Lembre-se:
+ Cada casa guarda um desafio de lógica. Esteja pronto!"
+
+[node name="texto4" parent="interface/CanvasLayer/Sprite2D" index="5" unique_id=1495816468]
+offset_left = 19.17675
+offset_top = -23.83449
+offset_right = 245.81104
+offset_bottom = 493.1655
+scale = Vector2(0.2, 0.2)
+
+[node name="VilaNoLivro" parent="interface/CanvasLayer/Sprite2D" index="6" unique_id=485962460]
+process_mode = 3
+z_index = 1
+offset_top = 5.9586186
+offset_bottom = 25.324135
+
+[node name="MolduraVila" parent="interface/CanvasLayer/Sprite2D" index="7" unique_id=1097363152]
+z_index = 1
+offset_top = -2.482761
+offset_bottom = 31.779316
+
+[node name="Começar" parent="interface/CanvasLayer" index="2" unique_id=1847327137]
+process_mode = 3
+
+[node name="BtnPlayFinal" parent="interface/CanvasLayer" index="3" unique_id=2146974160]
+process_mode = 3
+
+[node name="BtnProximo" parent="interface/CanvasLayer" index="4" unique_id=1708350624]
+process_mode = 3
+
 [editable path="ysort/NPC_fazendeiro"]
 [editable path="ysort/NPC_comerciante"]
 [editable path="ysort/NPC_bibliotecario"]
@@ -204,3 +299,4 @@ parameters/looping = true
 [editable path="ysort/Node2D/door"]
 [editable path="ysort/Node2D2/door"]
 [editable path="ysort/Character"]
+[editable path="interface"]

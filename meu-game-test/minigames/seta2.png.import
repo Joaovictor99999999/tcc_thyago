@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bysxiqn36ld2x"
-path="res://.godot/imported/New Piskel (14) (3) (1).png-c9bd47de499ce753d896db22eb0b7309.ctex"
+uid="uid://cw1ctoua47mh7"
+path="res://.godot/imported/seta2.png-0dc61bf2b2827daf3f59a5fff2dff79e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/New Piskel (14) (3) (1).png"
-dest_files=["res://.godot/imported/New Piskel (14) (3) (1).png-c9bd47de499ce753d896db22eb0b7309.ctex"]
+source_file="res://minigames/seta2.png"
+dest_files=["res://.godot/imported/seta2.png-0dc61bf2b2827daf3f59a5fff2dff79e.ctex"]
 
 [params]
 

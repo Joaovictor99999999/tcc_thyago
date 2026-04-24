@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpd8fp5rf8lcu"
-path="res://.godot/imported/Booksheet.png-c5d8ade242421d90af79ed1aebdeda55.ctex"
+uid="uid://bdx4cq8a5ywl"
+path="res://.godot/imported/Booksheet (1).png-df005bef0dde5704ffe66face869a547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/Booksheet.png"
-dest_files=["res://.godot/imported/Booksheet.png-c5d8ade242421d90af79ed1aebdeda55.ctex"]
+source_file="res://minigames/Booksheet (1).png"
+dest_files=["res://.godot/imported/Booksheet (1).png-df005bef0dde5704ffe66face869a547.ctex"]
 
 [params]
 

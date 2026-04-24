@@ -29,6 +29,12 @@ Macro=""
 Estrutura=""
 Finalizacao=""
 seta_guia=""
+baus=""
+fichas=""
+
+[gui]
+
+theme/custom_font="uid://daxci5jepdfn7"
 
 [input]
 

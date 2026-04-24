@@ -1,54 +1,171 @@
 [gd_scene format=3 uid="uid://jio6c36c4bqw"]
 
 [ext_resource type="Script" uid="uid://rsnpq1r8ektm" path="res://minigames/minigame_bibliotecario.gd" id="1_0340w"]
-[ext_resource type="Texture2D" uid="uid://chys5trerff4v" path="res://minigames/game1.png" id="2_4tjph"]
+[ext_resource type="Texture2D" uid="uid://dywwad1e4hdhp" path="res://minigames/game1 (2).png" id="2_4tjph"]
 [ext_resource type="Script" uid="uid://cx2jm4sh82ip6" path="res://minigames/ficha.gd" id="3_ga4c0"]
 [ext_resource type="Texture2D" uid="uid://diwu2jqa26r0" path="res://minigames/New Piskel (2) (1).png" id="3_kgdfs"]
 [ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="5_4tjph"]
-[ext_resource type="Texture2D" uid="uid://duvycnmpam8yu" path="res://minigames/livro.png" id="6_7y55t"]
+[ext_resource type="Texture2D" uid="uid://ckl4gs73k4hcu" path="res://minigames/Booksheet (5).png" id="6_4tjph"]
 [ext_resource type="Script" uid="uid://dc3qpcpimp8x1" path="res://minigames/bau.gd" id="6_k8y2p"]
-[ext_resource type="Texture2D" uid="uid://df2xvctdg34v2" path="res://minigames/New Piskel (3) (1).png" id="8_53pc7"]
-[ext_resource type="Texture2D" uid="uid://bsm0gfbwvo2ug" path="res://minigames/Esoteric.png" id="9_53pc7"]
+[ext_resource type="Texture2D" uid="uid://bo4obu2ujn0m7" path="res://minigames/ChatGPT Image 24 de abr. de 2026, 16_41_07.png" id="8_4tjph"]
+[ext_resource type="Texture2D" uid="uid://dpe34exh2fxq" path="res://minigames/game1 (2) (1).png" id="8_7y55t"]
+[ext_resource type="Texture2D" uid="uid://dtesuxebvmds0" path="res://minigames/Booksheet um.png" id="9_7y55t"]
+[ext_resource type="Texture2D" uid="uid://c2qqcaqy2rmgo" path="res://minigames/game1 (2) (2).png" id="9_50w67"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vynt2"]
 font = ExtResource("5_4tjph")
-font_size = 9
-font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tjph"]
+size = Vector2(20, 21)
 
 [sub_resource type="LabelSettings" id="LabelSettings_53pc7"]
 font = ExtResource("5_4tjph")
-font_size = 10
-font_color = Color(0.2509804, 0.16078432, 0.12941177, 1)
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ga4c0"]
 font = ExtResource("5_4tjph")
-font_size = 12
-font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
-shadow_color = Color(0, 0, 0, 1)
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="Animation" id="Animation_4tjph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7y55t"]
+resource_name = "passar_pagina"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_50w67"]
+_data = {
+&"RESET": SubResource("Animation_4tjph"),
+&"passar_pagina": SubResource("Animation_7y55t")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_0340w"]
 font = ExtResource("5_4tjph")
-font_size = 12
-font_color = Color(0.49019608, 0.3019608, 0.21568628, 1)
-shadow_color = Color(0, 0, 0, 1)
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="Animation" id="Animation_v1r2f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qo4vp"]
+resource_name = "passar_pagina"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999998, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ph1sk"]
+_data = {
+&"RESET": SubResource("Animation_v1r2f"),
+&"passar_pagina": SubResource("Animation_qo4vp")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_k8y2p"]
 font = ExtResource("5_4tjph")
-font_size = 14
-font_color = Color(0.49047178, 0.3026451, 0.21713895, 1)
-shadow_color = Color(0, 0, 0, 1)
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_abbpr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_v17ss"]
+resource_name = "passar_pagina"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999998, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e1f0q"]
+_data = {
+&"RESET": SubResource("Animation_abbpr"),
+&"passar_pagina": SubResource("Animation_v17ss")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_kgdfs"]
 font = ExtResource("5_4tjph")
-font_size = 12
-font_color = Color(0.25292358, 0.16086018, 0.12770507, 1)
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(1, 1, 1, 0)
+shadow_size = 0
 
-[sub_resource type="LabelSettings" id="LabelSettings_60o42"]
-font_size = 12
+[sub_resource type="LabelSettings" id="LabelSettings_qo4vp"]
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_qyj34"]
-font_size = 10
+[sub_resource type="LabelSettings" id="LabelSettings_50w67"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1r2f"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4tjph"]
 font_color = Color(0, 0, 0, 1)
 
 [node name="MinigameBibliotecario" type="CanvasLayer" unique_id=1306509426]
@@ -58,22 +175,19 @@ script = ExtResource("1_0340w")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -306.0
-offset_top = -2.0
-offset_right = 286.0
-offset_bottom = 9.0
+offset_left = -1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_4tjph")
-expand_mode = 1
-stretch_mode = 5
 
-[node name="ficha_string" type="TextureRect" parent="PainelPrincipal" unique_id=855334787]
+[node name="ficha_string" type="TextureRect" parent="PainelPrincipal" unique_id=855334787 groups=["fichas"]]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 63.0
-offset_right = 475.0
-offset_bottom = 103.0
+offset_left = 92.0
+offset_top = 57.0
+offset_right = 132.0
+offset_bottom = 97.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -83,18 +197,25 @@ tipo_da_ficha = "STRING"
 [node name="Label" type="Label" parent="PainelPrincipal/ficha_string" unique_id=1354330453]
 layout_mode = 0
 offset_left = 9.0
-offset_top = 11.0
+offset_top = 13.0
 offset_right = 49.0
-offset_bottom = 34.0
+offset_bottom = 36.0
+scale = Vector2(0.55, 0.55)
 text = "chave"
 label_settings = SubResource("LabelSettings_vynt2")
 
-[node name="ficha_float" type="TextureRect" parent="PainelPrincipal" unique_id=2053865720]
+[node name="Area2D" type="Area2D" parent="PainelPrincipal/ficha_string" unique_id=1255716058]
+position = Vector2(20, 27.999996)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PainelPrincipal/ficha_string/Area2D" unique_id=2031390716]
+shape = SubResource("RectangleShape2D_4tjph")
+
+[node name="ficha_float" type="TextureRect" parent="PainelPrincipal" unique_id=2053865720 groups=["fichas"]]
 layout_mode = 0
-offset_left = 480.0
-offset_top = 56.0
-offset_right = 520.0
-offset_bottom = 96.0
+offset_left = 149.0
+offset_top = 63.0
+offset_right = 189.0
+offset_bottom = 103.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -103,88 +224,135 @@ tipo_da_ficha = "FLOAT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/ficha_float" unique_id=1701441524]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 12.0
-offset_right = 49.0
-offset_bottom = 35.0
-text = "23.90"
+offset_left = 11.0
+offset_top = 13.0
+offset_right = 51.0
+offset_bottom = 36.0
+scale = Vector2(0.7, 0.7)
+text = "2.90"
 label_settings = SubResource("LabelSettings_53pc7")
 
-[node name="bau1" type="TextureRect" parent="PainelPrincipal" unique_id=1486099515]
-layout_mode = 0
-offset_left = 435.0
-offset_top = 124.0
-offset_right = 476.0
-offset_bottom = 159.0
-mouse_filter = 0
-texture = ExtResource("6_7y55t")
+[node name="Area2D" type="Area2D" parent="PainelPrincipal/ficha_float" unique_id=1439510673]
+position = Vector2(20, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PainelPrincipal/ficha_float/Area2D" unique_id=1713422880]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_4tjph")
+
+[node name="bau1" type="Sprite2D" parent="PainelPrincipal" unique_id=1699957103 groups=["baus"]]
+position = Vector2(109, 121)
+scale = Vector2(1.8821864, 1.4875)
+texture = ExtResource("6_4tjph")
+hframes = 6
 script = ExtResource("6_k8y2p")
 tipo_esperado = "FLOAT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau1" unique_id=562863098]
-visible = false
-layout_mode = 0
-offset_left = 1.0
-offset_top = 29.0
-offset_right = 38.0
-offset_bottom = 51.0
+z_index = 1
+offset_left = -5.8442698
+offset_top = 16.806728
+offset_right = 33.15573
+offset_bottom = 38.806725
+scale = Vector2(0.4, 0.4)
 text = "float"
 label_settings = SubResource("LabelSettings_ga4c0")
 
 [node name="Brilho_Neon" type="Polygon2D" parent="PainelPrincipal/bau1" unique_id=1910462173]
 
-[node name="bau2" type="TextureRect" parent="PainelPrincipal" unique_id=759108782]
-layout_mode = 0
-offset_left = 480.0
-offset_top = 115.0
-offset_right = 522.0
-offset_bottom = 150.0
-mouse_filter = 0
-texture = ExtResource("6_7y55t")
+[node name="Area2D" type="Area2D" parent="PainelPrincipal/bau1" unique_id=1842723659]
+position = Vector2(1.2145199, -1.1737531e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PainelPrincipal/bau1/Area2D" unique_id=1296473441]
+shape = SubResource("RectangleShape2D_4tjph")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PainelPrincipal/bau1" unique_id=356453918]
+libraries/ = SubResource("AnimationLibrary_50w67")
+
+[node name="TextureRect" type="TextureRect" parent="PainelPrincipal/bau1" unique_id=2015335605]
+offset_left = -9.03205
+offset_top = 16.13445
+offset_right = 12.2198305
+offset_bottom = 25.970518
+texture = ExtResource("8_7y55t")
+
+[node name="bau2" type="Sprite2D" parent="PainelPrincipal" unique_id=854279082 groups=["baus"]]
+position = Vector2(170, 122.00001)
+scale = Vector2(1.8386534, 1.4999998)
+texture = ExtResource("6_4tjph")
+hframes = 6
 script = ExtResource("6_k8y2p")
 tipo_esperado = "STRING"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau2" unique_id=1613687031]
-visible = false
-layout_mode = 0
-offset_left = 1.0
-offset_top = 26.0
-offset_right = 45.0
-offset_bottom = 49.0
+z_index = 1
+offset_left = -7.0703893
+offset_top = 17.333332
+offset_right = 36.92961
+offset_bottom = 40.33334
+scale = Vector2(0.4, 0.4)
 text = "string"
 label_settings = SubResource("LabelSettings_0340w")
 
 [node name="Brilho_Neon" type="Polygon2D" parent="PainelPrincipal/bau2" unique_id=162357607]
 
-[node name="bau3" type="TextureRect" parent="PainelPrincipal" unique_id=252319928]
-layout_mode = 0
-offset_left = 527.0
-offset_top = 125.0
-offset_right = 567.0
-offset_bottom = 159.0
-mouse_filter = 0
-texture = ExtResource("6_7y55t")
+[node name="Area2D" type="Area2D" parent="PainelPrincipal/bau2" unique_id=1676208469]
+position = Vector2(1.2000731, 0.76595736)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PainelPrincipal/bau2/Area2D" unique_id=794945410]
+shape = SubResource("RectangleShape2D_4tjph")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PainelPrincipal/bau2" unique_id=569470104]
+libraries/ = SubResource("AnimationLibrary_ph1sk")
+
+[node name="TextureRect" type="TextureRect" parent="PainelPrincipal/bau2" unique_id=367416147]
+offset_left = -8.7020235
+offset_top = 15.999998
+offset_right = 12.549857
+offset_bottom = 25.836067
+texture = ExtResource("8_7y55t")
+
+[node name="bau3" type="Sprite2D" parent="PainelPrincipal" unique_id=559264203 groups=["baus"]]
+position = Vector2(229.00002, 120.99999)
+scale = Vector2(1.7866589, 1.4749997)
+texture = ExtResource("6_4tjph")
+hframes = 6
 script = ExtResource("6_k8y2p")
 tipo_esperado = "INT"
 
 [node name="Label" type="Label" parent="PainelPrincipal/bau3" unique_id=218662756]
-visible = false
-layout_mode = 0
-offset_left = 9.0
-offset_top = 25.0
-offset_right = 49.0
-offset_bottom = 48.0
+z_index = 1
+offset_left = -2.238825
+offset_top = 16.949165
+offset_right = 37.761173
+offset_bottom = 39.94917
+scale = Vector2(0.4, 0.4)
 text = "int"
 label_settings = SubResource("LabelSettings_k8y2p")
 
 [node name="Brilho_Neon" type="Polygon2D" parent="PainelPrincipal/bau3" unique_id=598924388]
 
-[node name="ficha_int" type="TextureRect" parent="PainelPrincipal" unique_id=812012066]
+[node name="Area2D" type="Area2D" parent="PainelPrincipal/bau3" unique_id=2021469397]
+position = Vector2(1.2301927, -1.1737532e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PainelPrincipal/bau3/Area2D" unique_id=1141344150]
+shape = SubResource("RectangleShape2D_4tjph")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PainelPrincipal/bau3" unique_id=433910681]
+libraries/ = SubResource("AnimationLibrary_e1f0q")
+
+[node name="TextureRect" type="TextureRect" parent="PainelPrincipal/bau3" unique_id=702461865]
+offset_left = -8.955276
+offset_top = 15.5932255
+offset_right = 12.296605
+offset_bottom = 25.429293
+texture = ExtResource("8_7y55t")
+
+[node name="ficha_int" type="TextureRect" parent="PainelPrincipal" unique_id=812012066 groups=["fichas"]]
 layout_mode = 0
-offset_left = 523.0
-offset_top = 65.0
-offset_right = 563.0
-offset_bottom = 105.0
+offset_left = 211.0
+offset_top = 58.0
+offset_right = 251.0
+offset_bottom = 98.0
 texture = ExtResource("3_kgdfs")
 expand_mode = 1
 stretch_mode = 5
@@ -194,104 +362,93 @@ tipo_da_ficha = "INT"
 [node name="Label" type="Label" parent="PainelPrincipal/ficha_int" unique_id=24140210]
 layout_mode = 0
 offset_left = 14.0
-offset_top = 11.0
+offset_top = 15.0
 offset_right = 54.0
-offset_bottom = 34.0
+offset_bottom = 38.0
+scale = Vector2(0.7, 0.7)
 text = "23"
 label_settings = SubResource("LabelSettings_kgdfs")
 
-[node name="LabelScore" type="Label" parent="PainelPrincipal" unique_id=1961917723]
+[node name="Area2D" type="Area2D" parent="PainelPrincipal/ficha_int" unique_id=631001308]
+position = Vector2(20, 24.999996)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PainelPrincipal/ficha_int/Area2D" unique_id=336114243]
+shape = SubResource("RectangleShape2D_4tjph")
+
+[node name="TextureRect" type="TextureRect" parent="PainelPrincipal" unique_id=1354072061]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 71.0
+offset_bottom = 25.0
+texture = ExtResource("9_50w67")
+expand_mode = 1
 
-[node name="TelaVitoria" type="TextureRect" parent="." unique_id=1142696367]
-visible = false
-offset_left = 70.0
-offset_top = 26.0
-offset_right = 295.0
-offset_bottom = 153.0
-mouse_filter = 2
-texture = ExtResource("8_53pc7")
-
-[node name="Label" type="Label" parent="TelaVitoria" unique_id=1577158130]
+[node name="LabelScore" type="Label" parent="PainelPrincipal/TextureRect" unique_id=1961917723]
+z_index = 1
 layout_mode = 0
-offset_left = 29.0
-offset_top = 23.0
-offset_right = 581.0
-offset_bottom = 176.0
-text = "      O segredo dos tipos
-   INT, STRING, FLOAT não
-    é mais um mistério para
-      você. A vitória é sua!"
-label_settings = SubResource("LabelSettings_60o42")
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 75.0
+offset_bottom = 29.0
+scale = Vector2(0.8, 0.8)
+label_settings = SubResource("LabelSettings_qo4vp")
 
-[node name="Button" type="Button" parent="TelaVitoria" unique_id=1784430746]
+[node name="PainelFinal" type="TextureRect" parent="." unique_id=972648298]
+visible = false
+offset_right = 361.0
+offset_bottom = 181.0
+texture = ExtResource("8_4tjph")
+expand_mode = 1
+
+[node name="LivroInt" type="TextureRect" parent="PainelFinal" unique_id=1941970534]
 layout_mode = 0
-offset_left = 79.0
-offset_top = 100.0
-offset_right = 143.0
-offset_bottom = 117.0
-theme_override_font_sizes/font_size = 8
-text = "  coletar "
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 104.0
+offset_bottom = 98.0
+texture = ExtResource("9_7y55t")
+expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TelaVitoria" unique_id=978834669]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.575
-anchor_top = 0.5
-anchor_right = 1.575
-anchor_bottom = 0.5
-offset_left = -251.375
-offset_top = 5.5
-offset_right = -227.375
-offset_bottom = 32.5
-texture = ExtResource("9_53pc7")
-
-[node name="ColorRect" type="ColorRect" parent="TelaVitoria" unique_id=1255735754]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.5
-offset_left = 101.0
-offset_top = 69.0
-offset_right = 14.5
-offset_bottom = 96.0
-color = Color(0.0627451, 0.0627451, 0.0627451, 0.5294118)
-
-[node name="TelaDerrota" type="TextureRect" parent="." unique_id=578890223]
-visible = false
-offset_left = 70.0
-offset_top = 27.0
-offset_right = 296.0
-offset_bottom = 152.0
-mouse_filter = 2
-texture = ExtResource("8_53pc7")
-
-[node name="Label" type="Label" parent="TelaDerrota" unique_id=1131017512]
+[node name="Label" type="Label" parent="PainelFinal/LivroInt" unique_id=997905915]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 19.0
-offset_right = 295.0
-offset_bottom = 120.0
-text = "Erro de compatibilidade de tipos. 
-     A organização dos dados
-     foi interrompida devido 
-  ao excesso de falhas lógicas."
-label_settings = SubResource("LabelSettings_qyj34")
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 160.0
+offset_bottom = 118.0
+scale = Vector2(0.7, 0.7)
+label_settings = SubResource("LabelSettings_50w67")
 
-[node name="Button" type="Button" parent="TelaDerrota" unique_id=1780511705]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.065000005
-anchor_bottom = 0.14500001
-offset_left = 62.0
-offset_top = 88.0
-offset_right = 145.31
-offset_bottom = 90.875
-theme_override_font_sizes/font_size = 10
-text = "tentar novamente"
+[node name="LivroString" type="TextureRect" parent="PainelFinal" unique_id=1205748906]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 10.0
+offset_right = 234.0
+offset_bottom = 103.0
+texture = ExtResource("9_7y55t")
 
-[connection signal="pressed" from="TelaVitoria/Button" to="." method="_on_botao_coletar_pressed"]
-[connection signal="pressed" from="TelaDerrota/Button" to="." method="_on_botao_retry_pressed"]
+[node name="Label" type="Label" parent="PainelFinal/LivroString" unique_id=213122130]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 61.0
+offset_bottom = 102.0
+scale = Vector2(0.7, 0.7)
+label_settings = SubResource("LabelSettings_v1r2f")
+
+[node name="LivroFloat" type="TextureRect" parent="PainelFinal" unique_id=2031936999]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 356.0
+offset_bottom = 97.0
+texture = ExtResource("9_7y55t")
+
+[node name="Label" type="Label" parent="PainelFinal/LivroFloat" unique_id=904595884]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 59.0
+offset_bottom = 100.0
+scale = Vector2(0.7, 0.7)
+label_settings = SubResource("LabelSettings_4tjph")

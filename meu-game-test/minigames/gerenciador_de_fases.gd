@@ -165,7 +165,20 @@ func criar_dialogo(frases: Array, callback: Callable = Callable()):
 # 🏁 FINAL DO JOGO
 # ========================
 func finalizar_jogo():
+	# Criamos o diálogo passando a função '_concluir_e_fechar' como callback
+	# Assim, o código dentro de '_concluir_e_fechar' só roda quando o diálogo terminar.
 	criar_dialogo(
-		["Ponte finalizada! Você é um mestre da decomposição!"],
-		func(): get_tree().change_scene_to_file("res://terrain/scenes/level.tscn")
+		["Ponte finalizada! Você é um mestre da decomposição!"], 
+		_concluir_e_fechar
 	)
+
+# Esta função só será chamada quando o sinal "dialogo_finalizado" for emitido
+func _concluir_e_fechar():
+	print("🏆 Minigame encerrado, voltando para a vila...")
+	get_tree().paused = false
+	
+	# Se o script está em um filho, owner deleta a cena inteira instanciada
+	if owner:
+		owner.queue_free()
+	else:
+		queue_free()
