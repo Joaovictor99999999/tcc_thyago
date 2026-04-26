@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://b6xpaqt6minld" path="res://interface.gd" id="1_pt1ru"]
 [ext_resource type="Texture2D" uid="uid://bdx4cq8a5ywl" path="res://minigames/Booksheet (1).png" id="2_0noqu"]
 [ext_resource type="Texture2D" uid="uid://b51ukcm2emjb6" path="res://minigames/New Piskel (14) (3) (4).png" id="3_0noqu"]
+[ext_resource type="Texture2D" uid="uid://btksviosdkuek" path="res://minigames/Booksheet (1) (1).png" id="3_wjb41"]
 [ext_resource type="FontFile" uid="uid://chfl2espt2lye" path="res://Minecraft.ttf" id="4_pxv5b"]
 [ext_resource type="Texture2D" uid="uid://v7nydvb5aoa8" path="res://minigames/Captura de tela 2026-04-23 014310.png" id="5_5ofep"]
 [ext_resource type="Texture2D" uid="uid://dhyghmu6ddws8" path="res://minigames/botaolivro.png" id="5_jllm8"]
 [ext_resource type="Texture2D" uid="uid://dsa1ud30hd8sa" path="res://minigames/botaolivro1.png" id="6_5ofep"]
 [ext_resource type="Texture2D" uid="uid://crlv0krp83hpb" path="res://minigames/New Piskel (14) (3) (4) (1).png" id="6_ihefr"]
 [ext_resource type="Texture2D" uid="uid://b8yv4qsuqsrqb" path="res://minigames/seta1.png" id="7_jllm8"]
+[ext_resource type="Texture2D" uid="uid://1qt58c1rr3y3" path="res://minigames/Captura de tela 2026-04-26 115943.png" id="8_2m66s"]
 [ext_resource type="Texture2D" uid="uid://cw1ctoua47mh7" path="res://minigames/seta2.png" id="8_5ofep"]
 
 [sub_resource type="Animation" id="Animation_4rbkc"]
@@ -91,7 +93,7 @@ anchor_right = 0.99200004
 anchor_bottom = 0.98300004
 offset_right = 3.8799744
 offset_bottom = 4.0599976
-texture = ExtResource("2_0noqu")
+texture = ExtResource("3_wjb41")
 expand_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=940445124]
@@ -100,11 +102,13 @@ scale = Vector2(1.7208331, 2.0138886)
 texture = ExtResource("3_0noqu")
 hframes = 7
 vframes = 2
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Sprite2D" unique_id=1384691637]
 libraries/ = SubResource("AnimationLibrary_0noqu")
 
 [node name="texto2" type="Label" parent="CanvasLayer/Sprite2D" unique_id=250268713]
+visible = false
 texture_filter = 1
 offset_left = 18.595634
 offset_top = -22.841393
@@ -115,7 +119,7 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 7
-text = "A Jornada de Murge
+text = "A Jornada de Merge
 
 Para reconstruir a ponte e salvar a vila, ele deve buscar a sabedoria perdida com os moradores da vila.
 
@@ -127,6 +131,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="texto1" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1193453711]
+visible = false
 texture_filter = 1
 offset_left = -34.866844
 offset_top = -23.337944
@@ -137,28 +142,30 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 7
-text = "Murge – O Fazendeiro
+text = "Merge – O Fazendeiro
 
 Na pacata Vila das Variáveis, a vida seguia em ordem até a Grande Tempestade de Bugs.
 
 O caos destruiu a lendária Ponte do Conhecimento, deixando todos os moradores isolados e sem saída.
 
-Murge, um jovem fazendeiro famoso por sua organização e lógica impecável, aceitou o chamado para ajudar."
+Merge, um jovem fazendeiro famoso por sua organização e lógica impecável, aceitou o chamado para ajudar."
 label_settings = SubResource("LabelSettings_0noqu")
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="capa" type="Label" parent="CanvasLayer/Sprite2D" unique_id=2087736868]
+visible = false
 offset_left = 23.244545
 offset_top = -13.903456
 offset_right = 151.24454
 offset_bottom = 21.096544
 scale = Vector2(0.35, 0.35)
 text = "AS AVENTURAS 
-     DE MURGE"
+     DE MERGE"
 label_settings = SubResource("LabelSettings_jllm8")
 
 [node name="texto3" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1743901000]
+visible = false
 texture_filter = 1
 offset_left = -35.447952
 offset_top = -23.337944
@@ -170,13 +177,14 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 7
 text = "Página de Tutorial (Controles)
-Como Guiar Murge:
+Como Guiar Merge:
 
 Utilize as teclas W, A, S, D ou as Setas para caminhar pela Vila das Variáveis.
 Interagir:
-Pressione Espaço na frente de um Guardião ou objeto para conversar.
+Pressione a tecla \"E\" na frente de um Guardião ou objeto para conversar.
+
 Diálogos:
-Pressione Espaço ou Enter para avançar as falas e explicações.
+Pressione a tecla \"E\" para avançar as falas e explicações.
 
 Lembre-se: Cada casa guarda um desafio de lógica. Esteja pronto!"
 label_settings = SubResource("LabelSettings_0noqu")
@@ -184,6 +192,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="texto4" type="Label" parent="CanvasLayer/Sprite2D" unique_id=1495816468]
+visible = false
 texture_filter = 1
 offset_left = 18.014523
 offset_top = -16.386213
@@ -199,23 +208,60 @@ label_settings = SubResource("LabelSettings_0noqu")
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="texto5" type="Label" parent="CanvasLayer/Sprite2D" unique_id=139686332]
+texture_filter = 1
+offset_left = 18.014523
+offset_top = -16.386213
+offset_right = 316.31958
+offset_bottom = 500.6138
+scale = Vector2(0.15, 0.15)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 7
+label_settings = SubResource("LabelSettings_0noqu")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="VilaNoLivro" type="TextureRect" parent="CanvasLayer/Sprite2D" unique_id=485962460]
-offset_left = 22.08232
-offset_top = 4.468963
-offset_right = 61.016945
-offset_bottom = 23.83448
+visible = false
+offset_left = 22.082314
+offset_top = 4.46896
+offset_right = 61.016937
+offset_bottom = 23.834476
 texture = ExtResource("5_5ofep")
 expand_mode = 1
 
-[node name="MolduraVila" type="TextureRect" parent="CanvasLayer/Sprite2D" unique_id=1097363152]
-offset_left = 18.014519
-offset_top = -3.9724164
-offset_right = 65.08474
-offset_bottom = 30.289661
+[node name="MolduraVila" type="TextureRect" parent="CanvasLayer/Sprite2D/VilaNoLivro" unique_id=1097363152]
+z_index = 1
+layout_mode = 0
+offset_left = -4.067795
+offset_top = -8.441376
+offset_right = 43.002426
+offset_bottom = 25.820702
+texture = ExtResource("6_ihefr")
+expand_mode = 1
+
+[node name="VilaNoLivro2" type="TextureRect" parent="CanvasLayer/Sprite2D" unique_id=1694151951]
+offset_left = -31.961275
+offset_top = 10.924137
+offset_right = 6.9733486
+offset_bottom = 30.289654
+texture = ExtResource("8_2m66s")
+expand_mode = 1
+
+[node name="MolduraVila" type="TextureRect" parent="CanvasLayer/Sprite2D/VilaNoLivro2" unique_id=1756148217]
+z_index = 1
+layout_mode = 0
+offset_left = -4.067795
+offset_top = -8.441376
+offset_right = 43.002426
+offset_bottom = 25.820702
 texture = ExtResource("6_ihefr")
 expand_mode = 1
 
 [node name="Começar" type="TextureButton" parent="CanvasLayer" unique_id=1847327137]
+visible = false
 layout_mode = 0
 offset_left = 212.0
 offset_top = 124.0
@@ -226,6 +272,7 @@ texture_normal = ExtResource("5_jllm8")
 texture_pressed = ExtResource("6_5ofep")
 
 [node name="BtnPlayFinal" type="TextureButton" parent="CanvasLayer" unique_id=2146974160]
+visible = false
 layout_mode = 0
 offset_left = 206.0
 offset_top = 139.0
@@ -236,6 +283,7 @@ texture_normal = ExtResource("5_jllm8")
 texture_pressed = ExtResource("6_5ofep")
 
 [node name="BtnProximo" type="TextureButton" parent="CanvasLayer" unique_id=1708350624]
+visible = false
 layout_mode = 0
 offset_left = 249.0
 offset_top = 144.0

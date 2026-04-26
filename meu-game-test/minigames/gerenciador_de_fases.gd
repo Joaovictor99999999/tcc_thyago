@@ -16,6 +16,25 @@ var nomes_fases = ["Macro", "Fundacao", "Estrutura", "Finalizacao"]
 func _ready():
 	add_to_group("gerenciador_fase")
 	atualizar_visibilidade_fases()
+	chamar_introducao()
+# 🎬 INTRODUÇÃO / TUTORIAL
+# ========================
+func chamar_introducao():
+	var frases = [
+		"Merge montar um plano para reconstruir uma ponte é algo muito dificil.",
+		"Mas um problema dificil nada mais é que uma soma de pequenos problemas.",
+		"Entao vamos pegar as tres etapas de uma ponte.",
+		"Que é a fundaçao, estrutura e finzalizaçao e separar em problemas menores.",
+		"Como jogar o jogo:",
+		"Arraste as peças para os espaços vazios na ordem correta da construção.",
+		"Cada etapa concluída nos deixará mais perto de atravessar o rio!",
+		"Lembre-se: se algo parecer errado, revise a ordem das peças. Boa sorte!"
+	]
+	
+	# Usamos o criar_dialogo que você já tem. 
+	# Não passamos callback aqui para que o jogo apenas comece após o diálogo.
+	criar_dialogo(frases)
+	
 
 # ========================
 # 🎯 VERIFICAÇÃO PRINCIPAL
@@ -99,7 +118,7 @@ func exibir_erro(ordem_jogador: Array):
 # ========================
 func exibir_vitoria():
 	var frases = [
-		"Excelente! A fase " + nomes_fases[fase_atual] + " está concluída!",
+		"Excelente! A fase  da " + nomes_fases[fase_atual] + " está concluída!",
 		"Próxima etapa!"
 	]
 
@@ -159,7 +178,7 @@ func criar_dialogo(frases: Array, callback: Callable = Callable()):
 		print("Dialogo finalizado!")
 )
 
-	dialogo.iniciar_dialogo(frases, preload("res://character/assets/vovo.png"))
+	dialogo.iniciar_dialogo(frases, preload("res://character/assets/inventor.png"))
 
 # ========================
 # 🏁 FINAL DO JOGO
@@ -168,17 +187,20 @@ func finalizar_jogo():
 	# Criamos o diálogo passando a função '_concluir_e_fechar' como callback
 	# Assim, o código dentro de '_concluir_e_fechar' só roda quando o diálogo terminar.
 	criar_dialogo(
-		["Ponte finalizada! Você é um mestre da decomposição!"], 
+		["Plano da ponte finalizada! Você é um mestre da decomposição!"], 
 		_concluir_e_fechar
 	)
 
 # Esta função só será chamada quando o sinal "dialogo_finalizado" for emitido
 func _concluir_e_fechar():
-	print("🏆 Minigame encerrado, voltando para a vila...")
+	print("Minigame encerrado, atualizando seta...")
 	get_tree().paused = false
 	
-	# Se o script está em um filho, owner deleta a cena inteira instanciada
-	if owner:
-		owner.queue_free()
-	else:
-		queue_free()
+	# CHAMA A SETA PARA MUDAR O ALVO
+	var seta = get_tree().get_first_node_in_group("seta_guia")
+	if seta:
+		seta.proximo_objetivo()
+	
+	# Deleta a cena do minigame
+	if owner: owner.queue_free()
+	else: queue_free()

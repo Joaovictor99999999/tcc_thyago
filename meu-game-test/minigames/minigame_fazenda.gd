@@ -6,6 +6,7 @@ extends CanvasLayer # MUDADO: Agora o script e o nó no editor devem ser CanvasL
 @onready var label_indice_alvo = %LabelIndiceAlvo
 @onready var texto_instrucao = %TextoInstrucao
 @onready var label_coluna_alvo = %LabelColunaAlvo 
+@onready var seletor = $UI/Plantacao/Seletor
 
 # --- VARIÁVEIS DE CONTROLE ---
 var indice_selecionado: int = 0
@@ -45,15 +46,13 @@ var objetivo_horta = {
 	5: "beterraba",
 	6: "alface"
 }
-
+	
 func _ready():
-	# Garante que o minigame processe mesmo se o jogo estiver pausado no fundo
 	process_mode = Node.PROCESS_MODE_ALWAYS 
 	atualizar_ui()
 	iniciar_cutscene()
 
 # --- 🎬 LÓGICA DA CUTSCENE ---
-
 func iniciar_cutscene():
 	if cutscene_chamada: return 
 	cutscene_chamada = true 
@@ -68,15 +67,19 @@ func iniciar_cutscene():
 	dialogo.connect("dialogo_finalizado", _on_tutorial_concluido)
 	
 	dialogo.iniciar_dialogo(
-		["Olá, olhe para esta horta...",
+		["Olhe para esta horta...",
 		"Cada fileira de terra funciona como um VETOR (Array).",
 		"Um VETOR é uma lista que guarda várias informações em uma única variável.",
-		"Para encontrar uma planta, usamos o ÍNDICE, que é a posição dela na lista.",
+		"Essa variaveis sao acessadas atraves de algo que chamamos de indice.",
+		"Esse indice é a posiçao de cada planta no vetor.",
 		"O primeiro lugar da lista é sempre o ÍNDICE 0!",
 		"Como temos várias fileiras, criamos uma MATRIZ.",
 		"Uma MATRIZ é basicamente uma lista de listas, como um mapa de coordenadas.",
-		"Use as setas para definir o endereço exato [Coluna][Índice]...",
-		"E plante o tipo de dado correto em cada buraco!"],
+		"Como jogar o jogo:.",
+		"Use as setas para definir o endereço exato [Indice][Coluna]...",
+		"Veja a ordem que se deve seguir de legumes",
+		"Clique no legume da vez, colha ele e depois plante",
+		"Boa sorte"],
 		preload("res://character/assets/fazendeiro.png")
 	)
 
@@ -110,9 +113,18 @@ func _on_botao_coluna_dir_pressed():
 
 func atualizar_ui():
 	label_indice_alvo.text = str(indice_selecionado)
-	label_coluna_alvo.text = str(coluna_selecionada)
+	label_coluna_alvo.text = str(coluna_selecionada)	
 	texto_instrucao.text = "Endereço: [%d][%d]" % [coluna_selecionada, indice_selecionado]
-
+	
+	if seletor:
+		var pos_grade = calcular_posicao_grade()
+		# Usamos GLOBAL_POSITION para ignorar se o seletor está dentro da UI ou não
+		# Isso faz ele seguir as coordenadas reais do mapa
+		seletor.position = plantacao.map_to_local(pos_grade)
+		# Garante que ele apareça na frente
+		seletor.visible = true 
+		seletor.z_index = 5
+	
 func selecionar_semente(nome_planta: String):
 	semente_na_mao = nome_planta
 	texto_instrucao.text = nome_planta.capitalize() + " na mão!"
@@ -170,15 +182,20 @@ func ganhou_jogo():
 	
 	dialogo.iniciar_dialogo(
 		["Incrível! Você organizou toda a matriz de dados.",
-		"Agora a fazenda está rodando sem bugs!",
-		"Até a próxima!"],
-		preload("res://character/assets/vovo1.png")
+		"Agora a fazenda está rodando sem bugs!"],
+		preload("res://character/assets/fazendeiro.png")
 	)
 
 # --- 🏁 A SOLUÇÃO FINAL ---
 func _on_fim_do_jogo_total():
-	get_tree().paused = false
-	var seta = get_tree().get_first_node_in_group("seta_guia")
-	if seta:
-		seta.proximo_objetivo()
-	queue_free() # Deleta o minigame, mas a seta sobrevive no Player
+	# 1. Avisamos ao Level que o minigame acabou e queremos a ponte final
+	var level = get_tree().current_scene
+	
+	if level.has_method("iniciar_ponte_final"):
+		# Chamamos a função no Level que vai cuidar do diálogo e da cutscene
+		level.iniciar_ponte_final()
+	
+	# 2. Deletamos o minigame IMEDIATAMENTE
+	# Isso faz o mapa aparecer por baixo, como você quer
+	if owner: owner.queue_free()
+	else: queue_free()

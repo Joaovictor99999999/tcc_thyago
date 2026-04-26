@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://vmf7cpxv8jec" path="res://minigames/minigame_fazenda.gd" id="1_bs2mb"]
 [ext_resource type="Texture2D" uid="uid://dictmdretpsbc" path="res://terrain/assets/Props/Static/Farm.png" id="1_q6jj2"]
-[ext_resource type="Texture2D" uid="uid://csgoa3kql83o5" path="res://minigames/Captura de tela 2026-03-24 182803.png" id="2_4ynd8"]
 [ext_resource type="PackedScene" uid="uid://cq5dtdb3btfsw" path="res://terrain/scenes/plantacao.tscn" id="2_8k42k"]
+[ext_resource type="Texture2D" uid="uid://kg3rrtk05psf" path="res://minigames/A.png" id="2_wvwh8"]
 [ext_resource type="Texture2D" uid="uid://2jiq86y766hx" path="res://minigames/New Piskel (6).png" id="3_1xj3o"]
 [ext_resource type="Texture2D" uid="uid://c4q6irjecimvg" path="res://terrain/assets/Props/Static/Dungeon_Props.png" id="3_8225l"]
 [ext_resource type="Texture2D" uid="uid://bwmoisk7rqc48" path="res://minigames/New Piskel (5).png" id="4_6f18a"]
@@ -40,21 +40,19 @@
 [ext_resource type="Texture2D" uid="uid://b0d4wxrekeego" path="res://terrain/assets/Props/Static/Furniture.png" id="20_ijggl"]
 [ext_resource type="Texture2D" uid="uid://bfu1g4qy0x3ui" path="res://minigames/couveflor3.png" id="20_kvr47"]
 [ext_resource type="Texture2D" uid="uid://dohdewto05kya" path="res://terrain/assets/Props/Static/Esoteric.png" id="21_omuym"]
+[ext_resource type="Texture2D" uid="uid://bkfik02ox1t2l" path="res://minigames/game1 (2) (1) (2).png" id="41_wvwh8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ge4jo"]
-font_size = 7
-outline_size = 2
+outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0e4hs"]
 font = ExtResource("5_omuym")
-font_size = 10
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jp1er"]
 font = ExtResource("5_omuym")
-font_size = 8
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
@@ -90,7 +88,6 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ynd8"]
 font = ExtResource("5_omuym")
-font_size = 8
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
@@ -1239,11 +1236,11 @@ script = ExtResource("1_bs2mb")
 [node name="Fundo" type="TextureRect" parent="UI" unique_id=2111701999]
 offset_left = -2.0
 offset_top = -38.0
-offset_right = 342.39908
+offset_right = 377.61194
 offset_bottom = 217.44962
-scale = Vector2(1.1643469, 0.99823993)
+scale = Vector2(1.1453221, 0.98552364)
 mouse_filter = 2
-texture = ExtResource("2_4ynd8")
+texture = ExtResource("2_wvwh8")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1257,28 +1254,35 @@ theme_override_font_sizes/font_size = 8
 text = "Voltar
 "
 
-[node name="PainelTopo" type="NinePatchRect" parent="UI" unique_id=1974802984]
+[node name="PainelTopo" type="TextureRect" parent="UI" unique_id=1723580806]
+visible = false
 anchors_preset = -1
-anchor_top = -0.044444446
-anchor_bottom = -0.044444446
-offset_left = 129.0
-offset_top = -23.0
-offset_right = 260.0
-offset_bottom = 77.0
+anchor_left = 0.35300002
+anchor_top = 0.07811112
+anchor_right = 0.79399997
+anchor_bottom = 0.49400002
+offset_left = -10.080002
+offset_top = -33.06
+offset_right = -9.839996
+offset_bottom = -32.920006
 size_flags_vertical = 0
 texture = ExtResource("4_6f18a")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="LabelIndice" type="Label" parent="UI/PainelTopo" unique_id=1554511088]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.86300004
 anchor_bottom = 0.89800006
-offset_left = 45.0
-offset_top = 42.0
-offset_right = 44.947
-offset_bottom = 41.998
+offset_left = 60.0
+offset_top = 29.0
+offset_right = 103.79599
+offset_bottom = 28.997997
+scale = Vector2(0.6, 0.6)
+text = "ola"
 label_settings = SubResource("LabelSettings_ge4jo")
 
 [node name="PainelComando" type="NinePatchRect" parent="UI" unique_id=1907726610]
@@ -1291,57 +1295,63 @@ texture = ExtResource("3_1xj3o")
 
 [node name="Label" type="Label" parent="UI/PainelComando" unique_id=804099797]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 9.0
-offset_right = 124.0
-offset_bottom = 34.0
+offset_left = 26.0
+offset_top = 8.0
+offset_right = 151.0
+offset_bottom = 33.0
+scale = Vector2(0.7, 0.7)
 text = "PAINEL DE COMANDO"
 label_settings = SubResource("LabelSettings_0e4hs")
 
 [node name="Label2" type="Label" parent="UI/PainelComando" unique_id=1048726121]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 21.0
-offset_right = 77.0
-offset_bottom = 44.0
+offset_top = 19.0
+offset_right = 141.0
+offset_bottom = 42.0
+scale = Vector2(0.6, 0.6)
 text = "Escolha um legume"
 label_settings = SubResource("LabelSettings_jp1er")
 
 [node name="Label3" type="Label" parent="UI/PainelComando" unique_id=408820361]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 49.0
-offset_right = 145.0
-offset_bottom = 72.0
-text = "            indice             coluna"
+offset_left = -9.0
+offset_top = 50.0
+offset_right = 202.0
+offset_bottom = 73.0
+scale = Vector2(0.6, 0.6)
+text = "            indice            coluna"
 label_settings = SubResource("LabelSettings_jp1er")
 
 [node name="Label4" type="Label" parent="UI/PainelComando" unique_id=415391378]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 8.0
 offset_top = 77.0
-offset_right = 84.0
+offset_right = 110.0
 offset_bottom = 100.0
+scale = Vector2(0.6, 0.6)
 text = " Botao de acao"
 label_settings = SubResource("LabelSettings_jp1er")
 
 [node name="Label7" type="Label" parent="UI/PainelComando" unique_id=1350286957]
 z_index = 1
 layout_mode = 0
-offset_left = 84.0
-offset_top = 94.0
-offset_right = 159.0
-offset_bottom = 117.0
+offset_left = 80.0
+offset_top = 92.0
+offset_right = 155.0
+offset_bottom = 115.0
+scale = Vector2(0.6, 0.6)
 text = "Colher"
 label_settings = SubResource("LabelSettings_jp1er")
 
 [node name="Label8" type="Label" parent="UI/PainelComando" unique_id=135097120]
 z_index = 1
 layout_mode = 0
-offset_left = 31.0
-offset_top = 94.0
-offset_right = 106.0
-offset_bottom = 117.0
+offset_left = 27.0
+offset_top = 92.0
+offset_right = 102.0
+offset_bottom = 115.0
+scale = Vector2(0.6, 0.6)
 text = "Plantar"
 label_settings = SubResource("LabelSettings_jp1er")
 
@@ -1612,19 +1622,21 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="UI/ListaDesejos" unique_id=1189363473]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 41.0
-offset_right = 147.0
-offset_bottom = 64.0
+offset_left = 84.0
+offset_top = 42.0
+offset_right = 185.0
+offset_bottom = 65.0
+scale = Vector2(0.6, 0.6)
 text = "ordem a seguir"
 label_settings = SubResource("LabelSettings_4ynd8")
 
 [node name="Label2" type="Label" parent="UI/ListaDesejos" unique_id=1970673151]
 layout_mode = 0
-offset_left = 76.0
+offset_left = 73.0
 offset_top = 64.0
-offset_right = 183.0
+offset_right = 231.0
 offset_bottom = 87.0
+scale = Vector2(0.6, 0.6)
 text = "0   1   2   3   4    5   6  "
 label_settings = SubResource("LabelSettings_4ynd8")
 
@@ -1648,8 +1660,8 @@ label_settings = SubResource("LabelSettings_a3gb4")
 
 [node name="Plantacao" parent="UI" unique_id=1792231568 groups=["plantacao"] instance=ExtResource("2_8k42k")]
 unique_name_in_owner = true
-position = Vector2(318, 85)
-scale = Vector2(0.81889737, 0.72163457)
+position = Vector2(325.00003, 85)
+scale = Vector2(0.87666786, 0.7181693)
 tile_set = SubResource("TileSet_0e4hs")
 layer_0/y_sort_enabled = true
 layer_0/y_sort_origin = 1
@@ -1663,6 +1675,13 @@ layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 1
 layer_2/z_index = 2
 layer_2/tile_data = PackedInt32Array(-4259812, 5, 10, -4259813, 5, 11, -4325350, 720900, 30, -4128790, 65541, 9)
+
+[node name="Seletor" type="Sprite2D" parent="UI/Plantacao" unique_id=113008920]
+modulate = Color(1, 1, 1, 0.57254905)
+z_index = 1
+texture_filter = 1
+position = Vector2(-151.72964, 103.73223)
+texture = ExtResource("41_wvwh8")
 
 [connection signal="pressed" from="UI/PainelComando/VBoxSementes/add repolho" to="." method="_on_add_repolho_pressed"]
 [connection signal="pressed" from="UI/PainelComando/VBoxSementes/add cenoura" to="." method="_on_add_cenoura_pressed"]

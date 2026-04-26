@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://jio6c36c4bqw"]
 
 [ext_resource type="Script" uid="uid://rsnpq1r8ektm" path="res://minigames/minigame_bibliotecario.gd" id="1_0340w"]
-[ext_resource type="Texture2D" uid="uid://dywwad1e4hdhp" path="res://minigames/game1 (2).png" id="2_4tjph"]
+[ext_resource type="Texture2D" uid="uid://h1uceysg2g8u" path="res://minigames/game1 (2) (3).png" id="2_50w67"]
 [ext_resource type="Script" uid="uid://cx2jm4sh82ip6" path="res://minigames/ficha.gd" id="3_ga4c0"]
 [ext_resource type="Texture2D" uid="uid://diwu2jqa26r0" path="res://minigames/New Piskel (2) (1).png" id="3_kgdfs"]
 [ext_resource type="FontFile" uid="uid://daxci5jepdfn7" path="res://outros/ThaleahFat.ttf" id="5_4tjph"]
 [ext_resource type="Texture2D" uid="uid://ckl4gs73k4hcu" path="res://minigames/Booksheet (5).png" id="6_4tjph"]
 [ext_resource type="Script" uid="uid://dc3qpcpimp8x1" path="res://minigames/bau.gd" id="6_k8y2p"]
 [ext_resource type="Texture2D" uid="uid://bo4obu2ujn0m7" path="res://minigames/ChatGPT Image 24 de abr. de 2026, 16_41_07.png" id="8_4tjph"]
-[ext_resource type="Texture2D" uid="uid://dpe34exh2fxq" path="res://minigames/game1 (2) (1).png" id="8_7y55t"]
+[ext_resource type="Texture2D" uid="uid://cdluh6auoye8k" path="res://minigames/game1 (2) (1) (1).png" id="8_v1r2f"]
 [ext_resource type="Texture2D" uid="uid://dtesuxebvmds0" path="res://minigames/Booksheet um.png" id="9_7y55t"]
 [ext_resource type="Texture2D" uid="uid://c2qqcaqy2rmgo" path="res://minigames/game1 (2) (2).png" id="9_50w67"]
 
@@ -157,7 +157,9 @@ outline_color = Color(1, 1, 1, 0)
 shadow_size = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_qo4vp"]
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.45497, 0.2494556, 0.15331236, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_50w67"]
 font_color = Color(0, 0, 0, 1)
@@ -180,7 +182,7 @@ offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_4tjph")
+texture = ExtResource("2_50w67")
 
 [node name="ficha_string" type="TextureRect" parent="PainelPrincipal" unique_id=855334787 groups=["fichas"]]
 layout_mode = 0
@@ -273,7 +275,7 @@ offset_left = -9.03205
 offset_top = 16.13445
 offset_right = 12.2198305
 offset_bottom = 25.970518
-texture = ExtResource("8_7y55t")
+texture = ExtResource("8_v1r2f")
 
 [node name="bau2" type="Sprite2D" parent="PainelPrincipal" unique_id=854279082 groups=["baus"]]
 position = Vector2(170, 122.00001)
@@ -309,7 +311,7 @@ offset_left = -8.7020235
 offset_top = 15.999998
 offset_right = 12.549857
 offset_bottom = 25.836067
-texture = ExtResource("8_7y55t")
+texture = ExtResource("8_v1r2f")
 
 [node name="bau3" type="Sprite2D" parent="PainelPrincipal" unique_id=559264203 groups=["baus"]]
 position = Vector2(229.00002, 120.99999)
@@ -345,7 +347,7 @@ offset_left = -8.955276
 offset_top = 15.5932255
 offset_right = 12.296605
 offset_bottom = 25.429293
-texture = ExtResource("8_7y55t")
+texture = ExtResource("8_v1r2f")
 
 [node name="ficha_int" type="TextureRect" parent="PainelPrincipal" unique_id=812012066 groups=["fichas"]]
 layout_mode = 0
@@ -387,11 +389,11 @@ expand_mode = 1
 [node name="LabelScore" type="Label" parent="PainelPrincipal/TextureRect" unique_id=1961917723]
 z_index = 1
 layout_mode = 0
-offset_left = 5.0
+offset_left = 6.0
 offset_top = 6.0
-offset_right = 75.0
+offset_right = 76.0
 offset_bottom = 29.0
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.76, 0.76)
 label_settings = SubResource("LabelSettings_qo4vp")
 
 [node name="PainelFinal" type="TextureRect" parent="." unique_id=972648298]

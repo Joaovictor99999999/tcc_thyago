@@ -10,12 +10,13 @@
 [ext_resource type="Script" uid="uid://vlypyaql88k2" path="res://minigames/botao.gd" id="5_s0sin"]
 [ext_resource type="Script" uid="uid://c1eb4p1ifjl1x" path="res://minigames/SlotDestino.gd" id="6_m47wc"]
 [ext_resource type="Texture2D" uid="uid://by2yyt5bjlx3m" path="res://minigames/Furniture (4).png" id="7_38avk"]
-[ext_resource type="Texture2D" uid="uid://b11e05jqhkwyd" path="res://minigames/Tools1.png" id="9_odrrf"]
 [ext_resource type="Texture2D" uid="uid://c1hd8hqi7uywy" path="res://minigames/New Piskel (6) (8).png" id="11_yj810"]
 [ext_resource type="Texture2D" uid="uid://bvxaxveo1rysq" path="res://minigames/Tools2.png" id="12_de7e3"]
 [ext_resource type="Texture2D" uid="uid://c46abt57lcpdi" path="res://minigames/Level_6.png" id="13_b814i"]
+[ext_resource type="Texture2D" uid="uid://coklcxdxsq0kg" path="res://minigames/Tools11.png" id="14_32pp3"]
 [ext_resource type="Texture2D" uid="uid://q12x7xrdag5i" path="res://minigames/Level_3.png" id="14_b7fcx"]
 [ext_resource type="Texture2D" uid="uid://b3emcf0omvwxe" path="res://minigames/Tools.png" id="15_m47wc"]
+[ext_resource type="Texture2D" uid="uid://km0k4gp7gpce" path="res://minigames/Esoteric (5) (2) (2).png" id="15_pa2oq"]
 [ext_resource type="Texture2D" uid="uid://dprof5115ux7o" path="res://minigames/Level_5.png" id="15_q7q1b"]
 [ext_resource type="Texture2D" uid="uid://bg5rn14b2ip2m" path="res://minigames/Level_2.png" id="16_to205"]
 [ext_resource type="Texture2D" uid="uid://bsm0gfbwvo2ug" path="res://minigames/Esoteric.png" id="17_to205"]
@@ -25,8 +26,11 @@
 [ext_resource type="Texture2D" uid="uid://csm201m1ks5q5" path="res://minigames/botao2.png" id="23_4s77k"]
 [ext_resource type="Texture2D" uid="uid://dnpl6he6rc2jt" path="res://minigames/botao3.png" id="24_1ly1t"]
 [ext_resource type="Script" uid="uid://ds3agvy5jfj8n" path="res://minigames/verificar.gd" id="24_m47wc"]
+[ext_resource type="Texture2D" uid="uid://dpkpi4l82nnk8" path="res://minigames/Esoteric (5) (2) (1).png" id="24_yj810"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_to205"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 shadow_size = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_emxq5"]
@@ -345,9 +349,9 @@ id_parte = "2"
 
 [node name="botao2" type="TextureRect" parent="FASES/Fundacao/botoes" unique_id=1154611794 groups=["botoes"]]
 layout_mode = 0
-offset_left = 183.0
+offset_left = 187.0
 offset_top = -30.0
-offset_right = 209.0
+offset_right = 204.0
 offset_bottom = -8.0
 texture = ExtResource("12_de7e3")
 expand_mode = 1
@@ -356,20 +360,20 @@ id_parte = "1"
 
 [node name="botao3" type="TextureRect" parent="FASES/Fundacao/botoes" unique_id=1136283012 groups=["botoes"]]
 layout_mode = 0
-offset_left = 184.0
+offset_left = 186.0
 offset_top = 1.0
-offset_right = 210.0
+offset_right = 207.0
 offset_bottom = 25.0
-texture = ExtResource("9_odrrf")
+texture = ExtResource("14_32pp3")
 expand_mode = 1
 script = ExtResource("5_s0sin")
 id_parte = "3"
 
 [node name="planoPonte" type="Sprite2D" parent="FASES/Fundacao" unique_id=145665216]
 z_index = 1
-position = Vector2(165.00002, 67)
-scale = Vector2(1.8300806, 1.2105263)
-texture = ExtResource("19_yj810")
+position = Vector2(163.67688, 67)
+scale = Vector2(1.8689963, 1.2105263)
+texture = ExtResource("15_pa2oq")
 
 [node name="LabelFundacao" type="Label" parent="FASES/Fundacao" unique_id=1586990061]
 z_index = 1
@@ -544,9 +548,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.157
 anchor_bottom = 2.0830002
-offset_left = 187.0
+offset_left = 190.0
 offset_top = -66.0
-offset_right = 179.438
+offset_right = 176.438
 offset_bottom = -101.241005
 texture = ExtResource("13_b814i")
 expand_mode = 1
@@ -566,9 +570,9 @@ id_parte = "2"
 
 [node name="botao3" type="TextureRect" parent="FASES/Estrutura/botoes" unique_id=1819765254 groups=["botoes"]]
 layout_mode = 0
-offset_left = 184.0
+offset_left = 185.0
 offset_top = 1.0
-offset_right = 210.0
+offset_right = 207.0
 offset_bottom = 25.0
 texture = ExtResource("16_to205")
 expand_mode = 1
@@ -786,9 +790,9 @@ id_parte = "1"
 
 [node name="planoPonte" type="Sprite2D" parent="FASES/Finalizacao" unique_id=1065184951]
 z_index = 1
-position = Vector2(165.00002, 67)
-scale = Vector2(1.8300806, 1.2105263)
-texture = ExtResource("19_yj810")
+position = Vector2(163.67688, 66.91937)
+scale = Vector2(1.8689964, 1.2138858)
+texture = ExtResource("24_yj810")
 
 [node name="LabelFundacao" type="Label" parent="FASES/Finalizacao" unique_id=1629030485]
 z_index = 1

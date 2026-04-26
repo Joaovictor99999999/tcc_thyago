@@ -45,9 +45,15 @@ func iniciar_cutscene():
 	
 	dialogo.iniciar_dialogo(
 		["Bem-vindo ao minigame de Tipos de Dados!",
-		"Na programação, cada valor tem um tipo.",
-		"INT (Inteiro), FLOAT (Decimal) e STRING (Texto).",
-		"Arraste cada ficha para a caixa correta.",
+		"na programação cada dado pertence a um tipo diferente de conjunto.",
+		"temos, por exemplo,
+conjuntos do tipo INT (inteiro), que são compostos por números inteiros.",
+		"Float (ponto flutuante), que
+são compostos por números reais, ou seja, valores com casas decimais.",
+"e String(Texto), que
+representam uma sequência de caracteres (letras, números, símbolos e espaços).",
+"Como jogar o mini game, arraste cada pagina para seu respectivo livro.",
+"Mas eles precisam ser do mesmo tipo de dados, se nao seu score é descontado.",
 		"Boa sorte!"],
 		preload("res://character/assets/vovo.png")
 	)
@@ -130,7 +136,7 @@ func registrar_acerto(tipo: String, valor: String) -> void:
 		
 
 func verificar_passagem_de_fase() -> void:
-	if score >= 70:
+	if score >= 0:
 		if fase_atual >= 5:
 			vencer_jogo()
 		else:
@@ -206,8 +212,8 @@ func preparar_nova_fase() -> void:
 	
 	match fase_atual:
 		2: atualizar_labels("99", "Dados", "1.5")
-		3: atualizar_labels("-42", "Escudo", "3.14")
-		4: atualizar_labels("12", "Espada", "0.7")
+		3: atualizar_labels("-42", "Tipos", "3.14")
+		4: atualizar_labels("12", "Jogo", "0.7")
 		5: atualizar_labels("67", "Ferro", "9.99")
 	
 	set_fichas_ativas(true)
@@ -266,6 +272,7 @@ func iniciar_cutscene_progresso():
 
 func mostrar_resultado_final():
 	jogo_liberado = false
+	$PainelPrincipal/TextureRect/LabelScore.hide()
 	$PainelFinal.show() # Um painel que você vai criar com os 3 livros
 	
 	# Transforma a lista em um texto bonitinho pulando linha (\n)

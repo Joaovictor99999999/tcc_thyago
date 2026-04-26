@@ -41,8 +41,20 @@ func atualizar_alvo():
 		alvo_atual = null
 		visible = false
 
+# seta.gd
 func proximo_objetivo():
 	if lista_npcs.size() > 0:
-		lista_npcs.remove_at(0) # Remove o que acabamos de completar
+		lista_npcs.remove_at(0)
 		atualizar_alvo()
-		print("Seta atualizada! Novo alvo: ", alvo_atual.name if alvo_atual else "Nenhum")
+		
+		# Avisamos o Level que o jogador avançou de fase
+		var level = get_tree().current_scene # Pega o Level
+		if level.has_method("avancar_progresso"):
+			level.progresso_atual += 1
+			
+func _on_fim_do_jogo_total():
+	get_tree().paused = false
+	var seta = get_tree().get_first_node_in_group("seta_guia")
+	if seta:
+		seta.proximo_objetivo() # ISSO LIBERA O PRÓXIMO NPC AUTOMATICAMENTE
+	queue_free()

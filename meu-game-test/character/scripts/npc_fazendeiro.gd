@@ -45,17 +45,54 @@ func _on_body_exited(body: Node2D) -> void:
 			encerrar_dialogo(false) # Fecha sem abrir o minigame se o player fugir
 
 func iniciar_dialogo():
+	# 1. Trava de segurança para evitar loops
+	if falando: return 
+	
+	# 2. Verifica a Seta
+	var seta = get_tree().get_first_node_in_group("seta_guia")
+	if seta and seta.alvo_atual != self:
+		exibir_fala_bloqueio()
+		return 
+
+	# 3. Diálogo normal (se for o alvo certo)
 	falando = true
 	interromper_escrita = false
-	label_interacao.visible = false
 	caixa_dialogo.visible = true
 	texto_dialogo.visible = true
 	fala_index = 0
+	get_tree().paused = true
+	proxima_fala()
+
+func exibir_fala_bloqueio():
+	falando = true # Ativamos a trava aqui
 	
-	# Opcional: Pausar o resto do mundo enquanto o NPC fala
+	var dialogo_scene = load("res://minigames/dialogue_box.tscn")
+	if not dialogo_scene: 
+		falando = false
+		return
+	
+	var instancia = dialogo_scene.instantiate()
+	# Definimos uma layer alta para garantir que fique acima de tudo
+	if instancia is CanvasLayer:
+		instancia.layer = 100
+	
+	get_tree().current_scene.add_child(instancia)
 	get_tree().paused = true
 	
-	proxima_fala()
+	# O SEGREDO: Só liberamos o 'falando = false' depois de um tempinho
+	# Isso evita que o 'E' usado para fechar o diálogo reinicie ele na hora
+	instancia.connect("dialogo_finalizado", _on_bloqueio_finalizado)
+	
+	instancia.iniciar_dialogo(
+		["Ainda não é hora disso, Murge!", "Siga a seta para saber o que fazer primeiro."],
+		preload("res://minigames/game1 (2) (1) (3).png")
+	)
+
+func _on_bloqueio_finalizado():
+	get_tree().paused = false
+	# Aguarda um pequeno instante antes de permitir falar de novo
+	await get_tree().create_timer(0.2).timeout
+	falando = false
 
 func proxima_fala():
 	if fala_index < falas.size():
