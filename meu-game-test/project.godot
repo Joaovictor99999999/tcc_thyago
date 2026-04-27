@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="game_alpha"
+run/main_scene="uid://cbl8ncy8s4d40"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

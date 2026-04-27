@@ -278,7 +278,7 @@ offset_top = -22.344835
 offset_right = 182.08226
 offset_bottom = 494.65515
 scale = Vector2(0.2, 0.2)
-text = "obrigado por ter acompanhado nossa historia e tals"
+text = "A historia de Murge ainda estao sendo escritas por voce.\\n\\nPor enquanto ficamos por aqui, mas logo voltaremos.\\n\\nObrigado por jogar!"
 
 [node name="texto6" type="Label" parent="ysort/Character/Camera2D/interface/CanvasLayer/Sprite2D" index="7" unique_id=855155500]
 texture_filter = 1

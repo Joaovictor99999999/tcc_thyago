@@ -33,6 +33,7 @@ func liberar_mundo():
 		posicao_camera_inicio = cam.global_position
 		zoom_camera_inicio = cam.zoom
 		print("📸 Memória da câmera salva: Pos ", posicao_camera_inicio, " Zoom ", zoom_camera_inicio)
+	iniciar_ponte_inicial()
 	
 func pode_jogar(id_minigame: int) -> bool:
 	return id_minigame == progresso_atual
@@ -73,7 +74,7 @@ func iniciar_encerramento():
 				print("🏁 Zoom concluído. Mostrando despedida e 'Continua'...")
 				
 				# Espera 6 segundos (tempo para o jogador ler com calma)
-				await get_tree().create_timer(4.0).timeout
+				await get_tree().create_timer(11.0).timeout
 				if interface_node.has_method("preparar_para_fechar"):
 					interface_node.preparar_para_fechar()
 				# 3. Finaliza fechando o livro com a animação invertida
@@ -122,6 +123,16 @@ func iniciar_ponte_final():
 	
 	print("💬 Iniciando diálogo de epílogo no mapa...")
 	exibir_dialogo_fim_de_jogo() 
+	
+func iniciar_ponte_inicial():
+	# 1. Garante que o jogo não está pausado para o diálogo processar
+	get_tree().paused = false
+	
+	# 2. Pequeno delay para o jogador ver o Murge no mapa após o minigame fechar
+	await get_tree().create_timer(0.5).timeout
+	
+	print("💬 Iniciando diálogo de epílogo no mapa...")
+	exibir_dialogo_inicio_de_jogo() 
 
 func exibir_dialogo_fim_de_jogo():
 	# 3. Carrega e instancia a sua cena de diálogo
@@ -142,5 +153,24 @@ func exibir_dialogo_fim_de_jogo():
 		"Em outro momento continuaremos essa historia.",
 		"O livro desta aventura está prestes a se fechar... por enquanto."],
 		preload("res://character/assets/fazendeiro.png") # Certifique-se que o caminho existe
+	)
+	
+func exibir_dialogo_inicio_de_jogo():
+	# 3. Carrega e instancia a sua cena de diálogo
+	var dialogo_scene = load("res://minigames/dialogue_box.tscn")
+	var dialogo = dialogo_scene.instantiate()
+	add_child(dialogo)
+	
+	# 4. Conecta o sinal de finalização para chamar o livro
+	dialogo.connect("dialogo_finalizado", func():
+		print("📖 Diálogo encerrado. Iniciando cutscene do livro...")
+	)
+	
+	# 5. Configura o texto de despedida (ajuste o caminho da imagem se necessário)
+	dialogo.iniciar_dialogo(
+		[
+		"Para voce que chegou agora.",
+		"Siga a seta para concluir os desafios, o resto voce descobre."],
+		preload("res://character/assets/vovo.png") # Certifique-se que o caminho existe
 	)
 	
